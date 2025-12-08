@@ -1,0 +1,18 @@
+I":	<p>Hi there! Here’s the lazy grad student’s template for workshop webpages. I put this together to help automate mundane tasks with conventional workshop webpages - curating lists of speakers and/or organizers, schedules, and submitted/accepted papers. Here’s a completely unrelated picture adapted from “Machine Learning &amp; Artificial Intelligence” by <code class="language-plaintext highlighter-rouge">mikemacmarketing</code>; licensed under CC BY 2.0:</p>
+
+<p><img src="assets/img/banner.jpg" alt="" /></p>
+
+<p>The theme is quite easy to use if you’re familiar with Jekyll. The following collections are implemented:</p>
+<ol>
+  <li><strong>Speakers</strong>: Curate a <a href="speakers">speaker list like this one</a> from a set of markdown files, one per speaker. Crops and displays images if available. Adds a short bio. See files in the <code class="language-plaintext highlighter-rouge">_speakers</code> directory for examples.</li>
+  <li><strong>Organizers</strong>: Curate an organizer list from a set of markdown files, one per organizer. See files in the <code class="language-plaintext highlighter-rouge">_organizers</code> directory for examples.</li>
+  <li><strong>Schedule</strong>: Curate a <a href="schedule">schedule like this</a> from a set of markdown files, one per event (talk, panel, break, etc.). See files in the <code class="language-plaintext highlighter-rouge">_schedule</code> directory for examples. Schedule items are sorted by a <code class="language-plaintext highlighter-rouge">sequence_id</code> attribute.</li>
+  <li><strong>Papers</strong>: Curate a <a href="papers">list of papers like this</a> from a bunch of markdown files, one per paper. See files in the <code class="language-plaintext highlighter-rouge">_papers</code> directory for examples. Papers are sorted by a <code class="language-plaintext highlighter-rouge">sequence_id</code> attribute if specifed (else they are listed alphabetically).</li>
+</ol>
+
+<blockquote>
+  <p><strong>NOTE:</strong> The best way to use these is to turn feature on or off by editing the <code class="language-plaintext highlighter-rouge">collections</code> attribute in <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+</blockquote>
+
+<p>If you experience issues or have cool features to add, feel free to <a href="">fork this template</a>.</p>
+:ET

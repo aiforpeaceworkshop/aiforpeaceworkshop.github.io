@@ -11,7 +11,7 @@ affil: Trinity College Dublin
 affil_link: https://www.tcd.ie
 
 # An image of the speaker (square aspect ratio works the best) (place in the `assets/img/speakers` directory)
-img: ababebirhane.jpg
+img: abebebirhane.jpg
 
 ---
 

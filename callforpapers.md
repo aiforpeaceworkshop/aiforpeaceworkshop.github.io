@@ -36,14 +36,10 @@ The timeline for paper submission, notification, and publication will be as foll
 
 | Date | Milestone |
 |---|---|
-| Dec. 1, 2025 | Workshop acceptance notification. |
-| Dec. 15, 2025 | Submission site opens on OpenReview. |
-| Jan. 30, 2026 | Workshop contributions submission deadline. |
-| Feb. 2, 2026 | Reviewers assignments. |
-| Feb. 20, 2026 | Reviews due. |
-| Feb. 25, 2026 | Emergency reviews due. |
-| Mar. 1, 2026 | Decision notification and OpenReview publication. |
-| Mar. 30, 2026 | Website update with the final program. |
-| Apr. 26 or 27, 2026 | Workshop date. |
+| - | Paper submission deadline |
+| Feb. 2, 2026 | Reviewers assignments |
+| Feb. 20, 2026 | Reviews due |
+| Mar. 1, 2026 | Paper decision notification |
+| Apr. 26 or 27, 2026 | Workshop date |
 
 All dates are 11.59pm AOE.

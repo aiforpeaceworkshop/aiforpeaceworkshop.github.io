@@ -11,7 +11,7 @@ layout: default
   <div class = "post-content">
 	  <table style="border-collapse: collapse; border: none;">
 		{% assign organizers_sorted = site.organizers | sort: "sequence_id" %}
-	  	{% for organizer in site.organizers %}
+	  	{% for organizer in organizers_sorted %}
 		    <tr style="border: none;">
 		        <td style="border: none;">
 		            <div class="col-xs-12">

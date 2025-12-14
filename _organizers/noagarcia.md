@@ -12,4 +12,5 @@ affil_link: https://www.osaka-u.ac.jp/en
 
 # An image of the organizer (square aspect ratio works the best) (place in the `assets/img/organizers` directory)
 img: noagarcia.jpg
+sequence_id: 1
 ---

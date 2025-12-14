@@ -12,4 +12,5 @@ affil_link: https://www.ciirc.cvut.cz
 
 # An image of the organizer (square aspect ratio works the best) (place in the `assets/img/organizers` directory)
 img: evangeloskazakos.jpg
+sequence_id: 5
 ---

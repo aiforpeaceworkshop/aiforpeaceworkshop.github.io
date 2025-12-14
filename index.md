@@ -7,16 +7,18 @@ title: Home
 layout: home
 ---
 
-Hi there! Here's the lazy grad student's template for workshop webpages. I put this together to help automate mundane tasks with conventional workshop webpages - curating lists of speakers and/or organizers, schedules, and submitted/accepted papers. Here's a completely unrelated picture adapted from "Machine Learning & Artificial Intelligence" by `mikemacmarketing`; licensed under CC BY 2.0:
 
-![](assets/img/banner.jpg)
+<!-- ![](assets/img/banner.jpg) -->
 
-The theme is quite easy to use if you're familiar with Jekyll. The following collections are implemented:
-1. **Speakers**: Curate a [speaker list like this one](speakers) from a set of markdown files, one per speaker. Crops and displays images if available. Adds a short bio. See files in the `_speakers` directory for examples.
-2. **Organizers**: Curate an organizer list from a set of markdown files, one per organizer. See files in the `_organizers` directory for examples.
-3. **Schedule**: Curate a [schedule like this](schedule) from a set of markdown files, one per event (talk, panel, break, etc.). See files in the `_schedule` directory for examples. Schedule items are sorted by a `sequence_id` attribute.
-4. **Papers**: Curate a [list of papers like this](papers) from a bunch of markdown files, one per paper. See files in the `_papers` directory for examples. Papers are sorted by a `sequence_id` attribute if specifed (else they are listed alphabetically).
+Artificial intelligence (AI), including machine learning and computer vision, has many historical roots in research for milliary applications and much of the scientific community remains deeply connected to the surveillance and defense industries. Yet, even today, the military uses of AI are often obscured, whether research is directly funded by defense agencies or developed for civilian purposes but with dual-use implications. As a result, many researchers and developers remain unaware of how their work might be deployed in conflicts [18 ], and the extent to which they might contribute to intentional harm, including potentially violations of international law.
 
-> **NOTE:** The best way to use these is to turn feature on or off by editing the `collections` attribute in `_config.yml`.
+Although AI in conflict and surveillance is a key topic of public and policy debate, there are currently no formal spaces for AI researchers themselves to articulate and discuss the weaponization of their research. Given this gap, NeurIPS - with its key position in the research field - is an ideal host for a forum to consider both the harms associated with research dissemination and design decisions, and the opportunities for affirmatively building our research and development agenda from the starting position of non-violent harm prevention, research ethics, and respect for international law, including international humanitarian and human rights law.
 
-If you experience issues or have cool features to add, feel free to [fork this template]().
+In this workshop, we aim to address the critically under-discussed issue of AI’s dual-use nature,
+focusing on how machine learning technologies are being adapted for military purposes, potentially without the researchers’ knowledge or consent. While attending to the heightened risks associated with particular areas and systems of research, we will also be collectively thinking through what it looks like to engage productively in research and development activities that considers ethics and international law at its core. Our objectives are to:
+
+- Increase transparency about the pipelines through which AI research enters into military and surveillance applications.
+- Develop collective strategies to address ethical and legal risks as a community of researchers.
+- Highlight and support research efforts that contribute to peace-building applications, including those helping to surface or elucidate harmful applications of AI.
+
+A key avenue of exploration will be to invite parallels between current conversations in AI and similar debates (with longer histories) in other scientific fields, such as genetic biology and nuclear physics; where researchers have grappled with similar ethical challenges and proposed concrete professional responses.

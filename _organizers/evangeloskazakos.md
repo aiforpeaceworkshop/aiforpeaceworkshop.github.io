@@ -1,20 +1,15 @@
 ---
 # Name of the organizer
-name: Organizer Jane Doe
+name: Evangelos Kazakos
 
 # Link to the organizer's webpage
-webpage: https://jane.doe
+webpage: https://ekazakos.github.io
 
 # Primary affiliation
-affil: Buzz University
+affil: Czech Institute of Informatics, Robotics and Cybernetics at the Czech Technical University in Prague
 # Link to the primary affiliation
-affil_link: https://buzz.edu
+affil_link: https://www.ciirc.cvut.cz
 
 # An image of the organizer (square aspect ratio works the best) (place in the `assets/img/organizers` directory)
-img: jane.jpg
-
-# Secondary affiliation
-affil2: BuzzFizz Corp
-# Link to the secondary affiliation
-affil2_link: https://buzzfizz.corp
+img: evangeloskazakos.jpg
 ---

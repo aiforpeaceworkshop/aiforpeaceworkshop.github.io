@@ -4,4 +4,5 @@ speaker: John Doe
 affil: Fizz University
 title: Talk by John Doe
 time: 0945 - 1015
+published: false
 ---

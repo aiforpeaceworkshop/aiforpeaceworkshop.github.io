@@ -1,9 +1,0 @@
-<p class="home-quicklinks-title">Jump to:</p>
-<div class="home-quicklinks">
-  {% for path in site.header_pages %}
-    {% assign p = site.pages | where: "path", path | first %}
-    {% if p and p.url != "/" %}
-      <a class="home-quicklink" href="{{ p.url | relative_url }}">{{ p.title }}</a>
-    {% endif %}
-  {% endfor %}
-</div>

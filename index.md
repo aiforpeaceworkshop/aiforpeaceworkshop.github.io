@@ -23,9 +23,17 @@ In this workshop, we aim to address the critically under-discussed issue of AI's
 
 A key avenue of exploration will be to invite parallels between current conversations in AI and similar debates (with longer histories) in other scientific fields, such as genetic biology and nuclear physics; where researchers have grappled with similar ethical challenges and proposed concrete professional responses.
 
+<br>
 
-{% include quicklinks.html %}
+## Quick links
+- [Call for Papers](/callforpapers/)
+- [Speakers](/speakers/)
+- [Organizers](/organizers/)
+- [Schedule](/schedule/)
+- [Papers](/papers/)
+- [Contact](/contactus/)
 
+<br>
 
 ## References
 

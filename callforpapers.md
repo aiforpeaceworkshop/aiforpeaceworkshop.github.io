@@ -26,7 +26,7 @@ The following topics are excluded from the scope of the workshop:
 - Defense-oriented AI research lacking critical, ethical, or governance perspectives. 
 - Research on AI safety or alignment without connection to militarization, conflict, or peace. 
 
-**Submission site**: https://openreview.net/group?id=ICLR.cc/2026/Workshop/AI4Peace 
+**Submission site**: [https://openreview.net/group?id=ICLR.cc/2026/Workshop/AI4Peace](https://openreview.net/group?id=ICLR.cc/2026/Workshop/AI4Peace)
 
 **Timeline**
 

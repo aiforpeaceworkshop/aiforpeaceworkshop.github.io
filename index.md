@@ -8,7 +8,7 @@ layout: home
 ---
 
 
-<!-- ![](assets/img/banner.jpg) -->
+![](assets/img/aiforpeace_logo.png)
 
 Artificial intelligence (AI), including machine learning and computer vision, has many historical
 roots in research for milliary applications and much of the scientific community remains deeply connected to the surveillance and defense industries. Yet, even today, the military uses of AI are often obscured, whether research is directly funded by defense agencies or developed for civilian purposes but with dual-use implications. As a result, many researchers and developers remain unaware of how their work might be deployed in conflicts, and the extent to which they might contribute to intentional harm, including potentially violations of international law.

@@ -29,6 +29,7 @@ The following topics are excluded from the scope of the workshop:
 **Submission site**: https://openreview.net/group?id=ICLR.cc/2026/Workshop/AI4Peace 
 
 **Timeline**
+
 | Date | Event |
 |------|-------|
 | Dec. 15, 2025 | Submission site opens on OpenReview |

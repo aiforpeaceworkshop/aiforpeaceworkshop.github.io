@@ -24,6 +24,9 @@ In this workshop, we aim to address the critically under-discussed issue of AI's
 A key avenue of exploration will be to invite parallels between current conversations in AI and similar debates (with longer histories) in other scientific fields, such as genetic biology and nuclear physics; where researchers have grappled with similar ethical challenges and proposed concrete professional responses.
 
 
+{% include quicklinks.html %}
+
+
 ## References
 
 [1] K. Crawford. *The atlas of AI: Power, politics, and the planetary costs of artificial intelligence*. Yale

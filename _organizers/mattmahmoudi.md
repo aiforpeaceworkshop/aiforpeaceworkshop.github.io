@@ -12,5 +12,5 @@ affil_link: https://www.cdh.cam.ac.uk
 
 # An image of the organizer (square aspect ratio works the best) (place in the `assets/img/organizers` directory)
 img: mattmahmoudi.jpg
-sequence_id: 4
+sequence_id: 3
 ---

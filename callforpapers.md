@@ -9,6 +9,8 @@ We invite submissions for presentations at our workshop under two tracks:
 - **Tiny papers track**: presenting novel work or work in progress relevant to the topics of interest listed below. This track welcomes concise contributions that may not fit the scope of full conference papers but still offer valuable insights to the community. Submissions may be up to 2 pages (excluding references and supplementary material). All accepted tiny papers will be shared via OpenReview and presented as posters during the workshop, with a select few invited for short oral presentations.
 - **Previously published work**: related to the workshop topics of interest listed below. These submissions will be evaluated solely for eligibility and relevance. Accepted works will be presented as posters, with exceptional submissions considered for spotlight presentations.
 
+**Both tracks are non-archival**. Accepted tiny papers will be given the option to be featured on the workshop website. Given the sensitive nature of the topic, authors will also have the option to publish their work anonymously, if desired.
+
 While AI assistance is permitted, AI-generated papers are not allowed. Papers should follow the [Policies on Large Language Model Usage at ICLR 2026](https://blog.iclr.cc/2025/08/26/policies-on-large-language-model-usage-at-iclr-2026/), including the disclosure of LLM usage.
 
 The reviewing process will be single-blind and managed through OpenReview. During submission, authors will be required to disclose all sources of funding related to the research. We welcome submissions that fall under one of the following topics:

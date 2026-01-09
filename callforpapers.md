@@ -11,6 +11,8 @@ We invite submissions for presentations at our workshop under two tracks:
 
 **Both tracks are non-archival**. Accepted tiny papers will be given the option to be featured on the workshop website. Given the sensitive nature of the topic, authors will also have the option to publish their work anonymously, if desired.
 
+**Note**: Since 2025, ICLR has discontinued the separate “Tiny Papers” track, and is instead requiring each workshop to accept short (3–5 pages in ICLR format, exact page length to be determined by each workshop) paper submissions, with an eye towards inclusion; see [https://iclr.cc/Conferences/2025/CallForTinyPapers](https://iclr.cc/Conferences/2025/CallForTinyPapers) for a history of the ICLR tiny papers initiative. Authors of these papers will be earmarked for potential funding from ICLR, but need to submit a separate application for Financial Assistance that evaluates their eligibility. This application for Financial Assistance to attend ICLR 2026 will become available on [https://iclr.cc/Conferences/2026/](https://iclr.cc/Conferences/2026/) at the beginning of February and close early March.
+
 While AI assistance is permitted, AI-generated papers are not allowed. Papers should follow the [Policies on Large Language Model Usage at ICLR 2026](https://blog.iclr.cc/2025/08/26/policies-on-large-language-model-usage-at-iclr-2026/), including the disclosure of LLM usage.
 
 The reviewing process will be single-blind and managed through OpenReview. During submission, authors will be required to disclose all sources of funding related to the research. We welcome submissions that fall under one of the following topics:

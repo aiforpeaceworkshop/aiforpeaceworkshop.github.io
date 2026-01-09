@@ -12,7 +12,7 @@ affil_link: https://www.dair-institute.org
 
 # An image of the speaker (square aspect ratio works the best) (place in the `assets/img/speakers` directory)
 img: timnitgebru.jpg
-published: false
+published: true
 ---
 
 <!-- Whatever you write below will show up as the speaker's bio -->

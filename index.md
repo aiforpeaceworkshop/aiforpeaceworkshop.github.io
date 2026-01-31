@@ -10,6 +10,12 @@ layout: home
 
 ![](assets/img/aiforpeace_logo.png)
 
+## News
+- 2026.01.30: **Submission deadline extended** to 4th February 2026 AoE
+- 2026.01.15: Invited speakers announced: Alex Hanna, David Gray Widder, Gisela Luján Andrade, Joseph Redmon, Timnit Gebru
+- 2025.12.15: Call for papers published. Deadline 30th January 2026 AoE
+- 2025.12.01: Website is live!
+
 Artificial intelligence (AI), including machine learning and computer vision, has many historical
 roots in research for milliary applications [1,2] and much of the scientific community remains deeply connected to the surveillance and defense industries [3]. Yet, even today, the military uses of AI are often obscured, whether research is directly funded by defense agencies or developed for civilian purposes but with dual-use implications. As a result, many researchers and developers remain unaware of how their work might be deployed in conflicts [4], and the extent to which they might contribute to intentional harm, including potentially violations of international law [5].
 

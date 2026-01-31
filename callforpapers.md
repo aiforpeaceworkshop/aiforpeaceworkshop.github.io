@@ -37,7 +37,8 @@ The following topics are excluded from the scope of the workshop:
 | Date | Event |
 |------|-------|
 | Dec. 15, 2025 | Submission site opens on OpenReview |
-| Jan. 30, 2026 | Workshop contributions submission deadline |
+| ~~Jan. 30, 2026~~ | ~~Workshop submission deadline~~ |
+| Feb. 04, 2026 | **Workshop submission deadline extended** |
 | **Mar. 1, 2026** | **Decision notification and OpenReview publication** |
 | Apr. 26 or 27, 2026 | Workshop date |
 

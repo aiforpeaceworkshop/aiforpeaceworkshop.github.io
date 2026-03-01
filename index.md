@@ -11,6 +11,9 @@ layout: home
 ![](assets/img/aiforpeace_logo.png)
 
 ## News
+- 2026.03.01: List of accepted papers announced. [Link](assets/txt/accepted_papers.txt)
+- 2026.03.01: New invited speaker announced: Pier Luigi Dovesi, The Good AI Lab
+- 2026.03.01: The workshop will take place on 26 April 2026 
 - 2026.01.30: **Submission deadline extended** to 4th February 2026 AoE
 - 2026.01.15: Invited speakers announced: Alex Hanna, David Gray Widder, Gisela Luján Andrade, Joseph Redmon, Timnit Gebru
 - 2025.12.15: Call for papers published. Deadline 30th January 2026 AoE

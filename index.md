@@ -10,7 +10,7 @@ layout: home
 
 ![](assets/img/aiforpeace_logo.png)
 
-<div align="center"><h2><em>26th April 2026, ICLR 2026 @ Rio de Janeiro, Brazil</em></h2></div>
+<div align="center"><h3><em>26th April 2026, ICLR 2026 @ Rio de Janeiro, Brazil</em></h3></div>
 <br>
 
 ## News

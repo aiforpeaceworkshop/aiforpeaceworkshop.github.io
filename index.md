@@ -11,6 +11,7 @@ layout: home
 ![](assets/img/aiforpeace_logo.png)
 
 <div align="center"><h2><em>26th April 2026, ICLR 2026 @ Rio de Janeiro, Brazil</em></h2></div>
+<br>
 
 ## News
 - 2026.03.01: List of accepted papers announced. [Link](assets/txt/accepted_papers.txt)

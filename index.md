@@ -14,6 +14,7 @@ layout: home
 <br>
 
 ## News
+- 2026.04.19: Workshop schedule published. [Link](/schedule/)
 - 2026.03.01: List of accepted papers announced. [Link](assets/txt/accepted_papers.txt)
 - 2026.03.01: New invited speaker announced: Pier Luigi Dovesi, The Good AI Lab
 - 2026.03.01: The workshop will take place on 26 April 2026 

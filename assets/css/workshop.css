@@ -355,7 +355,23 @@ a:hover {
 }
 .post-content tbody tr:last-child td { border-bottom: none; }
 .post-content tbody tr:hover { background: var(--paper-warm); }
-.post-content tbody tr:has(td strong) td { background: var(--accent-soft); }
+/* Rows bolded in markdown mark past/completed deadlines — strike and mute */
+.post-content tbody tr:has(td strong) td {
+  text-decoration: line-through;
+  color: var(--ink-4);
+  background: transparent;
+}
+.post-content tbody tr:has(td strong) td strong {
+  color: var(--ink-4);
+  font-weight: 500;
+}
+/* Workshop date (final row) — highlighted */
+.post-content tbody tr:last-child td {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+.post-content tbody tr:last-child:hover td { background: var(--accent-soft); }
 .post-content hr { border: none; height: 1px; background: var(--line); margin: 2rem 0; }
 
 /* -------- Landing (home) -------- */

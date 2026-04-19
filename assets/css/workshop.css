@@ -375,13 +375,16 @@ a:hover {
 .post-content hr { border: none; height: 1px; background: var(--line); margin: 2rem 0; }
 
 /* -------- Landing (home) -------- */
+/* Full-bleed hero tint lives on <body> so it reaches page edges */
+.page--home {
+  background:
+    radial-gradient(ellipse 1400px 560px at 50% 320px, rgba(236,228,255,.95) 0%, rgba(236,228,255,0) 70%),
+    var(--paper-warm) !important;
+}
 .landing {
   position: relative;
   padding: 1rem 0 3rem;
-  background:
-    radial-gradient(ellipse 90% 60% at 50% 12%, rgba(236,228,255,.95) 0%, rgba(236,228,255,0) 70%),
-    var(--paper-warm);
-  border-radius: 0 0 var(--r-lg) var(--r-lg);
+  background: transparent;
 }
 .landing__hero-bg { display: none; }
 .landing__content { position: relative; }

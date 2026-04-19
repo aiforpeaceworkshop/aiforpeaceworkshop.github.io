@@ -4,7 +4,8 @@
   {%- include head.html -%}
 
   {%- assign body_class = page.permalink | default: page.url | replace: '/', ' ' | strip -%}
-  <body class="page{% if body_class != "" %} page--{{ body_class | replace: ' ', '-' }}{% endif %}">
+  {%- if body_class == "" -%}{%- assign body_class = "home" -%}{%- endif -%}
+  <body class="page page--{{ body_class | replace: ' ', '-' }}">
 
     {%- include header.html -%}
 

@@ -785,11 +785,11 @@ div.award { padding: 0; }
 }
 .page--contactus .post-title {
   font-family: var(--font-sans) !important;
-  font-size: .78rem !important;
+  font-size: 1.1rem !important;
   font-weight: 500 !important;
-  letter-spacing: .22em !important;
+  letter-spacing: .18em !important;
   text-transform: uppercase;
-  color: var(--ink-3) !important;
+  color: var(--ink-2) !important;
 }
 .page--contactus .post-content {
   max-width: 640px;

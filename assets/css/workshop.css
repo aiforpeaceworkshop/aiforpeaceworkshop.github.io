@@ -52,7 +52,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-sans);
   color: var(--ink-1);
-  background: var(--paper-warm);
+  background: var(--paper-warm) !important;
   line-height: 1.65;
   font-feature-settings: "kern", "liga", "calt", "ss01";
   -webkit-font-smoothing: antialiased;

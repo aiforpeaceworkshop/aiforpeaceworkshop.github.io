@@ -230,9 +230,7 @@ a:hover {
 }
 .site-footer .wrapper { }
 .site-footer .footer-col-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2.5rem;
+  display: block;
   margin-left: 0 !important;
   width: 100% !important;
 }
@@ -240,6 +238,7 @@ a:hover {
   padding: 0 !important;
   width: auto !important;
   min-width: 0;
+  max-width: 780px;
 }
 .site-footer a { color: var(--ink-2); text-decoration-color: var(--line); }
 .site-footer a:hover { color: var(--accent); text-decoration-color: var(--accent); }

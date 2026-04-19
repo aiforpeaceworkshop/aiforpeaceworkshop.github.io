@@ -420,14 +420,17 @@ a:hover {
 
 /* Section headings on landing */
 .landing__content h2 {
-  margin: 3rem 0 1.25rem;
-  font-size: .78rem;
+  margin: 3.5rem 0 1.4rem;
+  font-size: 1.9rem;
   font-weight: 700;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  padding-bottom: .6em;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: var(--ink-1);
+  padding-bottom: .55em;
   border-bottom: 2px solid var(--ink-1);
+}
+@media (max-width: 640px) {
+  .landing__content h2 { font-size: 1.5rem; }
 }
 
 /* News list */
@@ -440,12 +443,12 @@ a:hover {
 }
 #news + ul li {
   list-style: none !important;
-  padding: .75em 1em .75em 1.1em !important;
+  padding: .95em 1.15em .95em 1.25em !important;
   margin: 0 !important;
-  border-left: 3px solid var(--line);
+  border-left: 4px solid var(--line);
   color: var(--ink-2);
-  font-size: .98rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.55;
   transition: border-color .2s ease, background .2s ease;
 }
 #news + ul li::before { display: none !important; }
@@ -496,10 +499,10 @@ a:hover {
 #quick-links + ul {
   list-style: none !important;
   padding: 0 !important;
-  margin: .25rem 0 3rem !important;
+  margin: .5rem 0 3rem !important;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: .9rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
   max-width: none;
 }
 #quick-links + ul li {
@@ -513,15 +516,15 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: .75rem;
-  padding: 1em 1.15em;
+  padding: 1.25em 1.35em;
   border: 1px solid var(--line);
   border-radius: var(--r-md);
   background: var(--paper);
   color: var(--ink-1) !important;
   text-decoration: none !important;
   font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: -0.005em;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
   line-height: 1.25;
   transition: border-color .15s ease, background .15s ease, transform .15s ease, box-shadow .15s ease;
 }
@@ -529,7 +532,7 @@ a:hover {
   content: "→";
   color: var(--ink-5);
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   transition: transform .15s ease, color .15s ease;
   flex-shrink: 0;
 }
@@ -543,16 +546,13 @@ a:hover {
 #quick-links + ul li a:hover::after { transform: translateX(4px); color: var(--accent); }
 
 /* References — compact bibliography */
-#references {
-  font-size: .78rem !important;
-}
 #references ~ p {
-  font-size: .86rem;
-  line-height: 1.55;
-  color: var(--ink-3);
-  margin: 0 0 .55em;
-  padding-left: 2.2em;
-  text-indent: -2.2em;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 0 0 .7em;
+  padding-left: 2.4em;
+  text-indent: -2.4em;
   max-width: 90ch;
 }
 #references ~ p a { word-break: break-word; }

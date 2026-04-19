@@ -402,6 +402,7 @@ a:hover {
   width: 100%;
   height: auto;
   margin: 0 auto;
+  mix-blend-mode: multiply;
 }
 
 /* Date banner */

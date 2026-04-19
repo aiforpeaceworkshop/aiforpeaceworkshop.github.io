@@ -123,7 +123,7 @@ a:hover {
   font-size: 1.05rem !important;
   font-weight: 500 !important;
   color: var(--ink-1) !important;
-  letter-spacing: .12em !important;
+  letter-spacing: .08em !important;
   text-transform: uppercase;
   text-decoration: none !important;
   line-height: 1.2 !important;
@@ -132,6 +132,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   padding-right: 0 !important;
+  white-space: nowrap;
 }
 .site-title:visited { color: var(--ink-1) !important; }
 .site-title::before { content: none !important; }
@@ -146,18 +147,19 @@ a:hover {
   color: var(--ink-3) !important;
   text-decoration: none !important;
   padding: .35em .1em !important;
-  margin: 0 .6em !important;
+  margin: 0 .35em !important;
   border-radius: 0 !important;
   background: transparent !important;
   font-family: var(--font-sans);
   font-size: .92rem;
   font-weight: 500;
-  letter-spacing: .1em;
+  letter-spacing: .05em;
   text-transform: uppercase;
   line-height: 1.2;
   display: inline-block;
   border-bottom: 2px solid transparent;
   transition: color .15s ease, border-color .15s ease;
+  white-space: nowrap;
 }
 .site-nav .page-link:hover {
   color: var(--ink-1) !important;

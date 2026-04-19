@@ -367,9 +367,9 @@ a:hover {
   position: absolute;
   top: -30px; left: 50%;
   transform: translateX(-50%);
-  width: min(1400px, 140%);
-  height: 520px;
-  background: radial-gradient(ellipse at top, rgba(236,228,255,.8) 0%, rgba(250,248,242,0) 65%);
+  width: min(1600px, 160%);
+  height: 760px;
+  background: radial-gradient(ellipse at top, rgba(236,228,255,.85) 0%, rgba(250,248,242,0) 65%);
   pointer-events: none;
   z-index: 0;
 }
@@ -378,11 +378,11 @@ a:hover {
 /* Logo (first <p> wraps the <img>) */
 .landing__content > p:first-of-type {
   text-align: center;
-  margin: 1.2rem 0 .3rem !important;
+  margin: 2rem 0 1rem !important;
 }
 .landing__content img[src*="aiforpeace_logo"] {
   display: block;
-  max-width: 320px;
+  max-width: 720px;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -391,24 +391,32 @@ a:hover {
 /* Date banner */
 .landing__content > div[align="center"] {
   text-align: center;
-  margin: .5rem 0 3.5rem !important;
+  margin: 1.25rem 0 4.5rem !important;
 }
 .landing__content > div[align="center"] h3 {
   display: inline-block;
   margin: 0 !important;
-  padding: .55em 1.35em !important;
+  padding: .7em 1.9em !important;
   background: var(--accent-soft);
   color: var(--accent) !important;
   border-radius: 999px;
-  font-size: .82rem !important;
-  font-weight: 600 !important;
-  letter-spacing: .08em !important;
-  text-transform: uppercase;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .03em !important;
+  text-transform: none;
   border-bottom: none !important;
   line-height: 1.4 !important;
 }
 .landing__content > div[align="center"] h3 em { font-style: normal; }
 .landing__content > br { display: none; }
+
+@media (max-width: 720px) {
+  .landing__content img[src*="aiforpeace_logo"] { max-width: 100%; }
+  .landing__content > div[align="center"] h3 {
+    font-size: 1.05rem !important;
+    padding: .6em 1.3em !important;
+  }
+}
 
 /* Section headings on landing */
 .landing__content h2 {

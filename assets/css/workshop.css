@@ -382,7 +382,7 @@ a:hover {
 }
 .landing__content img[src*="aiforpeace_logo"] {
   display: block;
-  max-width: 720px;
+  max-width: 1040px;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -396,16 +396,16 @@ a:hover {
 .landing__content > div[align="center"] h3 {
   display: inline-block;
   margin: 0 !important;
-  padding: .7em 1.9em !important;
+  padding: .65em 1.6em !important;
   background: var(--accent-soft);
   color: var(--accent) !important;
   border-radius: 999px;
-  font-size: 1.35rem !important;
+  font-size: 2rem !important;
   font-weight: 700 !important;
-  letter-spacing: .03em !important;
+  letter-spacing: -0.01em !important;
   text-transform: none;
   border-bottom: none !important;
-  line-height: 1.4 !important;
+  line-height: 1.35 !important;
 }
 .landing__content > div[align="center"] h3 em { font-style: normal; }
 .landing__content > br { display: none; }
@@ -413,8 +413,8 @@ a:hover {
 @media (max-width: 720px) {
   .landing__content img[src*="aiforpeace_logo"] { max-width: 100%; }
   .landing__content > div[align="center"] h3 {
-    font-size: 1.05rem !important;
-    padding: .6em 1.3em !important;
+    font-size: 1.2rem !important;
+    padding: .55em 1.2em !important;
   }
 }
 

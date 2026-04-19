@@ -20,29 +20,31 @@ layout: default
             <img src="{{ 'avatar.jpg' | prepend: '/assets/img/organizers/' | prepend: site.baseurl | prepend: site.url }}" alt="{{ organizer.name }}">
           {% endif %}
         </div>
-        <h3 class="people-card__name">
-          {% if organizer.webpage %}
-            <a href="{{ organizer.webpage }}" target="_blank" rel="noopener">{{ organizer.name }}</a>
-          {% else %}
-            {{ organizer.name }}
-          {% endif %}
-        </h3>
-        <div class="people-card__affil">
-          {% if organizer.affil_link %}
-            <a href="{{ organizer.affil_link }}" target="_blank" rel="noopener">{{ organizer.affil }}</a>
-          {% else %}
-            {{ organizer.affil }}
+        <div class="people-card__body">
+          <h3 class="people-card__name">
+            {% if organizer.webpage %}
+              <a href="{{ organizer.webpage }}" target="_blank" rel="noopener">{{ organizer.name }}</a>
+            {% else %}
+              {{ organizer.name }}
+            {% endif %}
+          </h3>
+          <div class="people-card__affil">
+            {% if organizer.affil_link %}
+              <a href="{{ organizer.affil_link }}" target="_blank" rel="noopener">{{ organizer.affil }}</a>
+            {% else %}
+              {{ organizer.affil }}
+            {% endif %}
+          </div>
+          {% if organizer.affil2 %}
+          <div class="people-card__affil">
+            {% if organizer.affil2_link %}
+              <a href="{{ organizer.affil2_link }}" target="_blank" rel="noopener">{{ organizer.affil2 }}</a>
+            {% else %}
+              {{ organizer.affil2 }}
+            {% endif %}
+          </div>
           {% endif %}
         </div>
-        {% if organizer.affil2 %}
-        <div class="people-card__affil">
-          {% if organizer.affil2_link %}
-            <a href="{{ organizer.affil2_link }}" target="_blank" rel="noopener">{{ organizer.affil2 }}</a>
-          {% else %}
-            {{ organizer.affil2 }}
-          {% endif %}
-        </div>
-        {% endif %}
       </li>
       {% endfor %}
     </ul>

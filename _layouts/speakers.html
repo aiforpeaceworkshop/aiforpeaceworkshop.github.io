@@ -20,33 +20,35 @@ layout: default
             <img src="{{ 'avatar.jpg' | prepend: '/assets/img/speakers/' | prepend: site.baseurl | prepend: site.url }}" alt="{{ speaker.name }}">
           {% endif %}
         </div>
-        <h3 class="people-card__name">
-          {% if speaker.webpage %}
-            <a href="{{ speaker.webpage }}" target="_blank" rel="noopener">{{ speaker.name }}</a>
-          {% else %}
-            {{ speaker.name }}
+        <div class="people-card__body">
+          <h3 class="people-card__name">
+            {% if speaker.webpage %}
+              <a href="{{ speaker.webpage }}" target="_blank" rel="noopener">{{ speaker.name }}</a>
+            {% else %}
+              {{ speaker.name }}
+            {% endif %}
+          </h3>
+          <div class="people-card__affil">
+            {% if speaker.affil_link %}
+              <a href="{{ speaker.affil_link }}" target="_blank" rel="noopener">{{ speaker.affil }}</a>
+            {% else %}
+              {{ speaker.affil }}
+            {% endif %}
+          </div>
+          {% if speaker.affil2 %}
+          <div class="people-card__affil">
+            {% if speaker.affil2_link %}
+              <a href="{{ speaker.affil2_link }}" target="_blank" rel="noopener">{{ speaker.affil2 }}</a>
+            {% else %}
+              {{ speaker.affil2 }}
+            {% endif %}
+          </div>
           {% endif %}
-        </h3>
-        <div class="people-card__affil">
-          {% if speaker.affil_link %}
-            <a href="{{ speaker.affil_link }}" target="_blank" rel="noopener">{{ speaker.affil }}</a>
-          {% else %}
-            {{ speaker.affil }}
+          {% assign bio_text = speaker.content | strip_html | strip %}
+          {% if bio_text != "" %}
+            <div class="people-card__bio">{{ speaker.content }}</div>
           {% endif %}
         </div>
-        {% if speaker.affil2 %}
-        <div class="people-card__affil">
-          {% if speaker.affil2_link %}
-            <a href="{{ speaker.affil2_link }}" target="_blank" rel="noopener">{{ speaker.affil2 }}</a>
-          {% else %}
-            {{ speaker.affil2 }}
-          {% endif %}
-        </div>
-        {% endif %}
-        {% assign bio_text = speaker.content | strip_html | strip %}
-        {% if bio_text != "" %}
-          <div class="people-card__bio">{{ speaker.content }}</div>
-        {% endif %}
       </li>
       {% endfor %}
     </ul>

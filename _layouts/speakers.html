@@ -8,54 +8,48 @@ layout: default
     <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
 
-  <div class = "post-content">
-	  <table style="border-collapse: collapse; border: none;">
-	  	{% for speaker in site.speakers %}
-		    <tr style="border: none;">
-		        <td style="border: none;">
-		            <div class="col-xs-6">
-		                <p align="center">
-		                	{% if speaker.img %}
-		                    	<img class="people-pic" src="{{ speaker.img | prepend: '/assets/img/speakers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">
-		                    {% else %}
-		                    	<img class="people-pic" src="{{ 'avatar.jpg' | prepend: '/assets/img/speakers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">
-		                    {% endif %}
-		                </p>
-		            </div>
-		        </td>
-		        <td style="border: none;">
-		            <div class="people-name text-center">
-		            	<!-- Speaker name (link to webpage if provided) -->
-		            	{% if speaker.webpage %}
-		            		<b><a href="{{ speaker.webpage }}" target="_blank">{{ speaker.name }}</a></b>
-		            	{% else %}
-		            		<b>{{ speaker.name }}</b>
-		            	{% endif %}
-		                <br>
-		                <!-- Speaker affiliation (if provided) -->
-		                {% if speaker.affil_link %}
-		                	<a href="{{ speaker.affil_link }}" target="_blank">{{ speaker.affil }}</a>
-		                {% else %}
-		                	{{ speaker.affil }}
-		                {% endif %}
-		                <!-- Additional speaker affiliation (if provided) -->
-		                {% if speaker.affil2_link %}
-		                	<br>
-		                	<a href="{{ speaker.affil2_link }}" target="_blank">{{ speaker.affil2 }}</a>
-		                {% elsif speaker.affil2 %}
-		                	<br>
-		                	{{ speaker.affil2 }}
-		                {% endif %}
-		            </div>
-		        </td>
-		        <td style="border: none;">
-		        	<div class="people-name text-center">
-		        		{{ speaker.content }}
-		        	</div>
-		        </td>
-		    </tr>
-	    {% endfor %}
-	  </table>
+  <div class="post-content">
+    {% assign speakers_list = site.speakers | where_exp: "s", "s.published != false" %}
+    <ul class="people-grid">
+      {% for speaker in speakers_list %}
+      <li class="people-card">
+        <div class="people-card__photo">
+          {% if speaker.img %}
+            <img src="{{ speaker.img | prepend: '/assets/img/speakers/' | prepend: site.baseurl | prepend: site.url }}" alt="{{ speaker.name }}">
+          {% else %}
+            <img src="{{ 'avatar.jpg' | prepend: '/assets/img/speakers/' | prepend: site.baseurl | prepend: site.url }}" alt="{{ speaker.name }}">
+          {% endif %}
+        </div>
+        <h3 class="people-card__name">
+          {% if speaker.webpage %}
+            <a href="{{ speaker.webpage }}" target="_blank" rel="noopener">{{ speaker.name }}</a>
+          {% else %}
+            {{ speaker.name }}
+          {% endif %}
+        </h3>
+        <div class="people-card__affil">
+          {% if speaker.affil_link %}
+            <a href="{{ speaker.affil_link }}" target="_blank" rel="noopener">{{ speaker.affil }}</a>
+          {% else %}
+            {{ speaker.affil }}
+          {% endif %}
+        </div>
+        {% if speaker.affil2 %}
+        <div class="people-card__affil">
+          {% if speaker.affil2_link %}
+            <a href="{{ speaker.affil2_link }}" target="_blank" rel="noopener">{{ speaker.affil2 }}</a>
+          {% else %}
+            {{ speaker.affil2 }}
+          {% endif %}
+        </div>
+        {% endif %}
+        {% assign bio_text = speaker.content | strip_html | strip %}
+        {% if bio_text != "" %}
+          <div class="people-card__bio">{{ speaker.content }}</div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 
 </article>

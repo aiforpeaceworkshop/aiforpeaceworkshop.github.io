@@ -3,8 +3,7 @@
 
   {%- include head.html -%}
 
-  {%- assign body_class = page.permalink | default: page.url | replace: '/', ' ' | strip -%}
-  <body class="page{% if body_class != "" %} page--{{ body_class | replace: ' ', '-' }}{% endif %}">
+  <body>
 
     {%- include header.html -%}
 

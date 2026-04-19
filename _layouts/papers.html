@@ -8,47 +8,31 @@ layout: default
     <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
 
-  <div class = "post-content">
-	  <table>
-	  	{% for paper in site.papers %}
-		    <tr>
-		        <td>
-		            <div class="people-name text-center">
-		                <p align="center">
-		                	{% if paper.img %}
-		                    	<img class="paper-pic" src="{{ paper.img | prepend: '/assets/img/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">
-		                    {% else %}
-		                    	<img class="paper-pic" src="{{ 'default.svg' | prepend: '/assets/img/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">
-		                    {% endif %}
-		                </p>
-		            </div>
-		        </td>
-		        <td align="center">
-		        	<div class="people-name text-center">
-			        	<b>{{ paper.title }}</b>
-		        	</div>
-		        </td>
-		        <td>
-		            <div class="people-name text-center">
-		            	<!-- Author list -->
-		            	{% if paper.authors %}
-		            		{{ paper.authors }}
-		            	{% endif %}
-		                <!-- Author affiliations (if provided) -->
-		                {% if paper.affil %}
-		                	<br>
-		                	{{ paper.affil }}
-		                {% endif %}
-		                <!-- Link to PDF (if provided) -->
-		                {% if paper.pdf %}
-		                	<br>
-		                	<a href="{{ paper.pdf | prepend: '/assets/pdf/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>
-		                {% endif %}
-		            </div>
-		        </td>
-		    </tr>
-	    {% endfor %}
-	  </table>
+  <div class="post-content">
+    {% assign papers_list = site.papers | where_exp: "p", "p.published != false" %}
+    <div class="papers-list">
+      {% for paper in papers_list %}
+      <div class="paper-card{% unless paper.img %} paper-card--no-thumb{% endunless %}">
+        {% if paper.img %}
+        <div class="paper-card__thumb">
+          <img src="{{ paper.img | prepend: '/assets/img/papers/' | prepend: site.baseurl | prepend: site.url }}" alt="{{ paper.title }}">
+        </div>
+        {% endif %}
+        <div class="paper-card__body">
+          <h3 class="paper-card__title">{{ paper.title }}</h3>
+          {% if paper.authors %}
+            <div class="paper-card__authors">{{ paper.authors }}</div>
+          {% endif %}
+          {% if paper.affil %}
+            <div class="paper-card__affil">{{ paper.affil }}</div>
+          {% endif %}
+          {% if paper.pdf %}
+            <a class="paper-card__pdf" href="{{ paper.pdf | prepend: '/assets/pdf/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank" rel="noopener">PDF →</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 
 </article>

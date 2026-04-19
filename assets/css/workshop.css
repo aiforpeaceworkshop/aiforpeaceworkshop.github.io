@@ -378,18 +378,13 @@ a:hover {
 .landing {
   position: relative;
   padding: 1rem 0 3rem;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 12%, rgba(236,228,255,.95) 0%, rgba(236,228,255,0) 70%),
+    var(--paper-warm);
+  border-radius: 0 0 var(--r-lg) var(--r-lg);
 }
-.landing__hero-bg {
-  position: absolute;
-  top: -30px; left: 50%;
-  transform: translateX(-50%);
-  width: min(1600px, 160%);
-  height: 760px;
-  background: radial-gradient(ellipse at top, rgba(236,228,255,.85) 0%, rgba(250,248,242,0) 65%);
-  pointer-events: none;
-  z-index: 0;
-}
-.landing__content { position: relative; z-index: 1; }
+.landing__hero-bg { display: none; }
+.landing__content { position: relative; }
 
 /* Logo (first <p> wraps the <img>) */
 .landing__content > p:first-of-type {

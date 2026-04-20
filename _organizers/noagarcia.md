@@ -3,7 +3,7 @@
 name: Noa Garcia
 
 # Link to the organizer's webpage
-webpage: https://noagarcia.github.io
+webpage: https://www.noagarciad.com
 
 # Primary affiliation
 affil: University of Osaka

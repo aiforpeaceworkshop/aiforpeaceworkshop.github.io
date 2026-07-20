@@ -55,17 +55,17 @@ Then verify:
 - [ ] Mobile navigation opens, closes, and follows links.
 - [ ] No console errors appear.
 
-## Why the build creates `404.html`
+## Why the build creates route entry files
 
 GitHub Pages does not know about React Router routes. The build script copies
-`dist/index.html` to `dist/404.html`, allowing a direct visit or refresh on
-`/first-edition` to load the application, after which React Router selects the
-correct page.
+`dist/index.html` to `dist/first-edition/index.html`, so direct visits and
+refreshes return the archive application with HTTP 200. It also writes
+`dist/404.html` as a fallback for unknown client-side routes.
 
 Do not remove this part of the build script unless routing or hosting changes:
 
 ```json
-"build": "tsc -b && vite build && cp dist/index.html dist/404.html"
+"build": "tsc -b && vite build && mkdir -p dist/first-edition && cp dist/index.html dist/first-edition/index.html && cp dist/index.html dist/404.html"
 ```
 
 ## Troubleshooting
@@ -90,8 +90,8 @@ begin with `/`, for example `/img/speakers/name.jpg`.
 
 ### A route returns 404 after refresh
 
-Open the workflow artifact and confirm that both `index.html` and `404.html`
-exist at the top level of `dist/`.
+Open the workflow artifact and confirm that `index.html`,
+`first-edition/index.html`, and `404.html` are present in `dist/`.
 
 ### The old favicon remains visible
 

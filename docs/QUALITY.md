@@ -14,8 +14,8 @@ npm run check
 ```
 
 `npm run check` runs Oxlint and the production build. The build includes the
-TypeScript project check and creates both `dist/index.html` and
-`dist/404.html`.
+TypeScript project check and creates `dist/index.html`,
+`dist/first-edition/index.html`, and the general `dist/404.html` fallback.
 
 ## Content integrity
 

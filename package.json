@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
+    "build": "tsc -b && vite build && mkdir -p dist/first-edition && cp dist/index.html dist/first-edition/index.html && cp dist/index.html dist/404.html",
     "check": "npm run lint && npm run check:content && npm run build",
     "check:content": "node scripts/check_content.mjs",
     "lint": "oxlint",

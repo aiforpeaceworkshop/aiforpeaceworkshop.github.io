@@ -50,9 +50,9 @@ Run the complete local preflight before publishing:
 npm run check
 ```
 
-This lints the source and creates the production build. The build also writes
-`dist/404.html`, which allows GitHub Pages to serve the archived React route
-directly.
+This lints the source and creates the production build. The build writes a
+physical `dist/first-edition/index.html` entry for the archive route and a
+`dist/404.html` fallback for unknown client-side routes.
 
 ## Updating workshop content
 

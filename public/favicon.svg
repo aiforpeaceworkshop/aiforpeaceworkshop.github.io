@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#f4f2ec"/>
+
+  <!-- A: built from the same hard pixel blocks as the wordmark -->
+  <path fill="#16181d" d="M8 12h20v8H8zM4 20h8v36H4zM24 20h8v36h-8zM12 32h12v8H12z"/>
+
+  <!-- I -->
+  <path fill="#16181d" d="M38 12h22v8H38zM45 20h8v28h-8zM38 48h22v8H38z"/>
+
+  <!-- Single signal pixel, matching the site's restrained red accent -->
+  <rect x="56" y="24" width="4" height="4" fill="#d6321f"/>
+</svg>

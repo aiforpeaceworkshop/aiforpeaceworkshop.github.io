@@ -1,8 +1,11 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SITE, CURRENT_EDITION } from "@/data/site";
 import { BrandWordmark } from "@/components/BrandWordmark";
+import { useWorkshopStatus } from "@/hooks/useWorkshopStatus";
 
 export function Hero() {
+  const workshopStatus = useWorkshopStatus();
+
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="hero-dot-grid dot-grid pointer-events-none absolute inset-0 opacity-50" />
@@ -20,9 +23,15 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-5">
-            <a href={SITE.submissionUrl} target="_blank" rel="noreferrer" className="btn btn-accent">
-              Submit a presentation <ArrowUpRight className="h-4 w-4" />
-            </a>
+            {workshopStatus.submissionsOpen ? (
+              <a href={SITE.submissionUrl} target="_blank" rel="noreferrer" className="btn btn-accent">
+                {workshopStatus.heroActionLabel} <ArrowUpRight className="h-4 w-4" />
+              </a>
+            ) : (
+              <a href="#call" className="btn btn-ghost">
+                {workshopStatus.heroActionLabel} <ArrowRight className="h-4 w-4" />
+              </a>
+            )}
             <a href="#call" className="hero-text-link">
               Read the call <ArrowRight className="h-4 w-4" />
             </a>

@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = resolve(root, "dist");
 
-const directories = ["assets", "img", "first-edition"];
+const directories = ["assets", "img", "iclr-2026", "first-edition"];
 const files = ["index.html", "404.html", "favicon.svg"];
 
 for (const directory of directories) {

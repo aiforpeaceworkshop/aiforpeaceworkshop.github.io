@@ -1,8 +1,10 @@
 import { ArrowUpRight, Check, FileText, Mic2, LayoutGrid } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
-import { SITE, CFP_TOPICS, CFP_TIMELINE, CURRENT_EDITION } from "@/data/site";
+import { SITE, CFP_TOPICS, CURRENT_EDITION } from "@/data/site";
+import { CFP_TIMELINE, WORKSHOP_SCHEDULE } from "@/data/workshopSchedule";
 import { cn } from "@/lib/utils";
+import { useWorkshopStatus } from "@/hooks/useWorkshopStatus";
 
 const FACTS = [
   { icon: FileText, label: "Abstract", value: "One page max" },
@@ -11,6 +13,9 @@ const FACTS = [
 ];
 
 export function CallForPresentations() {
+  const workshopStatus = useWorkshopStatus();
+  const completedTimelineIds = new Set(workshopStatus.completedTimelineIds);
+
   return (
     <section id="call" className="section border-y-2 border-border bg-paper">
       <div className="mx-auto max-w-6xl px-5">
@@ -56,36 +61,47 @@ export function CallForPresentations() {
             <Reveal delay={80}>
               <div className="ink-card ink-card-accent overflow-hidden">
                 <div className="border-b-2 border-border bg-ink px-5 py-3">
-                  <span className="font-pixel text-[0.55rem] text-background">
-                    TIMELINE
-                  </span>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="font-pixel text-[0.55rem] text-background">
+                      TIMELINE
+                    </span>
+                    <span className="font-mono text-[0.62rem] font-bold uppercase tracking-wide text-background/60">
+                      All dates · {WORKSHOP_SCHEDULE.timeZoneLabel}
+                    </span>
+                  </div>
                 </div>
                 <ol className="divide-y divide-line">
-                  {CFP_TIMELINE.map((item) => (
-                    <li
-                      key={item.event}
-                      className={cn(
-                        "flex items-center justify-between gap-3 px-5 py-4",
-                        item.highlight && "bg-accent/10",
-                      )}
-                    >
+                  {CFP_TIMELINE.map((item) => {
+                    const done = completedTimelineIds.has(item.id);
+                    const current = workshopStatus.currentTimelineId === item.id;
+
+                    return (
+                      <li
+                        key={item.id}
+                        data-timeline-id={item.id}
+                        data-timeline-state={done ? "done" : current ? "current" : "upcoming"}
+                        className={cn(
+                          "flex items-center justify-between gap-3 px-5 py-4",
+                          current && "bg-alert/10",
+                        )}
+                      >
                       <div className="flex items-center gap-3">
                         <span
                           className={cn(
                             "grid h-5 w-5 place-items-center rounded-full border-2 text-[0.6rem]",
-                            item.done
+                            done
                               ? "border-accent bg-accent text-accent-foreground"
-                              : item.highlight
-                                ? "border-accent text-accent"
+                              : current
+                                ? "border-alert text-alert"
                                 : "border-line text-transparent",
                           )}
                         >
-                          {item.done && <Check className="h-3 w-3" />}
+                          {done && <Check className="h-3 w-3" />}
                         </span>
                         <span
                           className={cn(
                             "font-sans text-sm",
-                            item.highlight ? "font-bold" : "font-medium",
+                            current ? "font-bold" : "font-medium",
                           )}
                         >
                           {item.event}
@@ -94,20 +110,27 @@ export function CallForPresentations() {
                       <span className="font-mono text-xs font-bold uppercase tracking-wide text-muted-foreground">
                         {item.date}
                       </span>
-                    </li>
-                  ))}
+                      </li>
+                    );
+                  })}
                 </ol>
-                <div className="border-t-2 border-border p-5">
-                  <a
-                    href={SITE.submissionUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-accent w-full"
-                  >
-                    Submit an abstract <ArrowUpRight className="h-4 w-4" />
-                  </a>
+                <div className="border-t-2 border-border p-5" data-status-cta>
+                  {workshopStatus.submissionsOpen ? (
+                    <a
+                      href={SITE.submissionUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-accent w-full"
+                    >
+                      {workshopStatus.callActionLabel} <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  ) : (
+                    <span className="btn btn-ghost w-full" aria-disabled="true">
+                      {workshopStatus.callActionLabel}
+                    </span>
+                  )}
                   <p className="mt-3 text-center font-mono text-xs text-muted-foreground">
-                    Submit via the workshop form
+                    {workshopStatus.callNote}
                   </p>
                 </div>
               </div>

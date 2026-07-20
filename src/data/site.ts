@@ -46,30 +46,9 @@ export const NAV_LINKS = [
   { label: "Call", href: "/#call" },
   { label: "Speakers", href: "/#speakers" },
   { label: "Organizers", href: "/#organizers" },
-  { label: "First edition", href: "/first-edition" },
+  { label: "First edition", href: "/iclr-2026" },
   { label: "Contact", href: "/#contact" },
 ] as const;
-
-/* ---- News -------------------------------------------------- */
-
-export type NewsItem = { date: string; text: string; href?: string };
-
-export const NEWS: NewsItem[] = [
-  {
-    date: "2026.07.18",
-    text: "Call for presentations is open. Submit by September 14.",
-    href: SITE.submissionUrl,
-  },
-  {
-    date: "2026.07.11",
-    text: "AI for Peace returns for a second edition at NeurIPS 2026 in Paris.",
-  },
-  {
-    date: "2026.04.26",
-    text: "The first edition of AI for Peace took place at ICLR 2026 in Rio de Janeiro.",
-    href: "#first-edition",
-  },
-];
 
 /* ---- Objectives -------------------------------------------- */
 
@@ -98,20 +77,6 @@ export const CFP_TOPICS = [
   "Historical or comparative analyses of dual-use technology governance.",
   "Sociotechnical audits of existing military AI systems.",
   "Whistleblowing mechanisms and academic responsibility in high-risk research.",
-];
-
-export type TimelineItem = {
-  date: string;
-  event: string;
-  done?: boolean;
-  highlight?: boolean;
-};
-
-export const CFP_TIMELINE: TimelineItem[] = [
-  { date: "Jul 18, 2026", event: "Submission site opens", done: true },
-  { date: "Sep 14, 2026", event: "Submission deadline", highlight: true },
-  { date: "Sep 29, 2026", event: "Decision notification" },
-  { date: "Dec 12 or 13, 2026", event: "Workshop day (TBC)" },
 ];
 
 /* ---- People ------------------------------------------------ */

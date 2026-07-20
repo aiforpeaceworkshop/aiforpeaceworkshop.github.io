@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/img/aiforpeace_logo_refined-1440.png" alt="AI for Peace" width="680" />
+  <img src="public/img/aiforpeace_logo_readme.png" alt="AI for Peace" width="680" />
 </p>
 
 <h1 align="center">AI for Peace workshop website</h1>
@@ -19,8 +19,9 @@
 ## What this repository contains
 
 This repository is the source for the AI for Peace workshop website. The home
-page presents the second edition at NeurIPS 2026; `/first-edition` preserves the
-ICLR 2026 workshop as an archive.
+page presents the second edition at NeurIPS 2026; `/iclr-2026` preserves the
+ICLR 2026 workshop as an archive. The former `/first-edition` URL redirects to
+the canonical archive route.
 
 The site is a static React application built with Vite, TypeScript, and
 Tailwind CSS. Its visual system extends the workshop’s original pixel wordmark
@@ -51,21 +52,24 @@ npm run check
 ```
 
 This lints the source and creates the production build. The build writes a
-physical `dist/first-edition/index.html` entry for the archive route and a
-`dist/404.html` fallback for unknown client-side routes.
+physical `dist/iclr-2026/index.html` entry for the archive route, a compatibility
+entry for `/first-edition`, and a `dist/404.html` fallback for unknown
+client-side routes.
 
 ## Updating workshop content
 
-Most editorial updates require changes only to
-[`src/data/site.ts`](src/data/site.ts).
+Most editorial updates require changes in [`src/data/site.ts`](src/data/site.ts).
+Date-driven submission states live separately in
+[`src/data/workshopSchedule.ts`](src/data/workshopSchedule.ts).
 
 | Change | Data export |
 | --- | --- |
 | Workshop title, submission link, contact | `SITE` |
 | Current venue, city, date, and format | `CURRENT_EDITION` |
-| Announcement bar | `NEWS` |
+| Announcement and submission phases | `WORKSHOP_SCHEDULE`, `getWorkshopStatus` |
 | Workshop objectives | `OBJECTIVES` |
-| Call topics and dates | `CFP_TOPICS`, `CFP_TIMELINE` |
+| Call topics | `CFP_TOPICS` |
+| Call dates and AoE boundaries | `CFP_TIMELINE`, `WORKSHOP_SCHEDULE` |
 | NeurIPS organizers | `ORGANIZERS` |
 | NeurIPS invited speakers | `NEURIPS_SPEAKERS` |
 | ICLR archive | `FIRST_EDITION_*` |
@@ -84,12 +88,13 @@ source. Do not upscale small images or use search-result thumbnails.
 ```text
 .
 ├── .github/workflows/       GitHub Pages deployment
-├── app/index.html           Vite source HTML template
+├── app/                     Vite HTML template and thin source bootstrap
 ├── docs/                    Content, design, QA, and release guides
 ├── public/
 │   ├── favicon.svg          Square browser icon
 │   └── img/                 Wordmark assets and portraits
 ├── scripts/
+│   ├── check_schedule.mjs   Tests every AoE phase boundary
 │   ├── generate_logo.py     Rebuilds optimized wordmark masks
 │   └── sync_pages_root.mjs  Refreshes the legacy Pages snapshot
 └── src/

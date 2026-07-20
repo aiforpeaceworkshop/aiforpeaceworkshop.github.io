@@ -22,7 +22,7 @@ with:
 
 ```bash
 npm run publish:legacy
-git add .nojekyll 404.html assets favicon.svg first-edition img index.html
+git add .nojekyll 404.html assets favicon.svg first-edition iclr-2026 img index.html
 ```
 
 This commits a production snapshot at the repository root, which is the source
@@ -63,8 +63,9 @@ npm run preview
 Then verify:
 
 - [ ] Home page loads at `/`.
-- [ ] First-edition archive loads at `/first-edition`.
-- [ ] Refreshing `/first-edition` does not return a 404.
+- [ ] ICLR 2026 archive loads at `/iclr-2026`.
+- [ ] Refreshing `/iclr-2026` does not return a 404.
+- [ ] `/first-edition` redirects to `/iclr-2026`.
 - [ ] Submission form opens the correct form.
 - [ ] Contact email is correct.
 - [ ] Current deadline agrees across the page.
@@ -76,14 +77,15 @@ Then verify:
 ## Why the build creates route entry files
 
 GitHub Pages does not know about React Router routes. The build script copies
-`dist/index.html` to `dist/first-edition/index.html`, so direct visits and
-refreshes return the archive application with HTTP 200. It also writes
+`dist/index.html` to `dist/iclr-2026/index.html`, so direct visits and refreshes
+return the archive application with HTTP 200. It retains
+`dist/first-edition/index.html` as a compatibility entry and writes
 `dist/404.html` as a fallback for unknown client-side routes.
 
 Do not remove this part of the build script unless routing or hosting changes:
 
 ```json
-"build": "tsc -b && vite build && mkdir -p dist/first-edition && cp dist/index.html dist/first-edition/index.html && cp dist/index.html dist/404.html"
+"build": "tsc -b && vite build && mkdir -p dist/iclr-2026 dist/first-edition && cp dist/index.html dist/iclr-2026/index.html && cp dist/index.html dist/first-edition/index.html && cp dist/index.html dist/404.html"
 ```
 
 ## Troubleshooting
@@ -113,7 +115,8 @@ begin with `/`, for example `/img/speakers/name.jpg`.
 ### A route returns 404 after refresh
 
 Open the workflow artifact and confirm that `index.html`,
-`first-edition/index.html`, and `404.html` are present in `dist/`.
+`iclr-2026/index.html`, `first-edition/index.html`, and `404.html` are present
+in `dist/`.
 
 ### The old favicon remains visible
 

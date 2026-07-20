@@ -19,7 +19,9 @@ the field out until it can be confirmed.
 
 ## Where content lives
 
-All structured content is in [`src/data/site.ts`](../src/data/site.ts).
+Most structured content is in [`src/data/site.ts`](../src/data/site.ts).
+Submission dates, AoE boundaries, and the copy used for each automatic phase
+are in [`src/data/workshopSchedule.ts`](../src/data/workshopSchedule.ts).
 
 `SITE` contains global links and contact details. `CURRENT_EDITION` and
 `FIRST_EDITION` contain edition-level facts. People are split into current and
@@ -110,10 +112,13 @@ style rules.
 When updating the call:
 
 1. Confirm the date and wording against the published call.
-2. Update `CFP_TIMELINE` and the announcement in `NEWS` together.
+2. Update `CFP_TIMELINE` and `WORKSHOP_SCHEDULE` together.
 3. Check the submission form URL in `SITE.submissionUrl`.
-4. Ensure the hero deadline and call timeline agree; both read the same data.
-5. Rebuild the site and inspect the mobile timeline for wrapping.
+4. Express end-of-day deadlines as AoE (`UTC−12`) boundaries. For example,
+   September 14 AoE ends at `2026-09-15T12:00:00Z`.
+5. Update each grounded phase message without claiming that notifications were
+   sent or an event occurred solely because its scheduled date passed.
+6. Run `npm run check:schedule`, then inspect the mobile timeline for wrapping.
 
 ## References
 

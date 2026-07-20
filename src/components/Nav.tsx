@@ -4,6 +4,7 @@ import { Menu, X, Moon, Sun } from "lucide-react";
 import { NAV_LINKS, SITE, CURRENT_EDITION } from "@/data/site";
 import { BrandWordmark } from "@/components/BrandWordmark";
 import { useTheme } from "@/hooks/useTheme";
+import { useWorkshopStatus } from "@/hooks/useWorkshopStatus";
 
 const linkClass =
   "link-underline font-pixel text-[0.5rem] uppercase leading-relaxed text-muted-foreground transition-colors hover:text-foreground";
@@ -33,11 +34,13 @@ function NavLink({
 
 export function Nav() {
   const { theme, toggle } = useTheme();
+  const workshopStatus = useWorkshopStatus();
   const [open, setOpen] = useState(false);
   const [atTop, setAtTop] = useState(true);
   const { pathname } = useLocation();
-  const hideHomeWordmark = pathname === "/" && atTop;
-  const editionLabel = pathname === "/first-edition"
+  const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+  const hideHomeWordmark = normalizedPathname === "/" && atTop;
+  const editionLabel = normalizedPathname === "/iclr-2026"
     ? "ICLR 2026 · First edition"
     : "NeurIPS 2026 · Second edition";
 
@@ -69,15 +72,24 @@ export function Nav() {
         </div>
 
         <div className="flex items-center gap-2">
-          <a
-            href={SITE.submissionUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="nav-submit font-pixel text-[0.5rem] uppercase leading-relaxed chip chip-alert"
-          >
-            <span className="status-dot" />
-            Submit
-          </a>
+          {workshopStatus.submissionsOpen ? (
+            <a
+              href={SITE.submissionUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="nav-submit font-pixel text-[0.5rem] uppercase leading-relaxed chip chip-alert"
+            >
+              <span className="status-dot" />
+              {workshopStatus.navLabel}
+            </a>
+          ) : (
+            <a
+              href="/#call"
+              className="nav-submit font-pixel text-[0.5rem] uppercase leading-relaxed chip text-muted-foreground"
+            >
+              {workshopStatus.navLabel}
+            </a>
+          )}
           <button
             onClick={toggle}
             aria-label="Toggle dark mode"

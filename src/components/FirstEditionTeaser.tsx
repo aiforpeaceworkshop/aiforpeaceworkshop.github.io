@@ -12,7 +12,7 @@ export function FirstEditionTeaser() {
 
         <Reveal>
           <Link
-            to="/first-edition"
+            to="/iclr-2026"
             className="ink-card ink-card-hover group block overflow-hidden"
           >
             <div className="grid items-center gap-8 p-7 md:grid-cols-2 md:p-10">

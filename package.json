@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && mkdir -p dist/first-edition && cp dist/index.html dist/first-edition/index.html && cp dist/index.html dist/404.html",
-    "check": "npm run lint && npm run check:content && npm run build",
+    "build": "tsc -b && vite build && mkdir -p dist/iclr-2026 dist/first-edition && cp dist/index.html dist/iclr-2026/index.html && cp dist/index.html dist/first-edition/index.html && cp dist/index.html dist/404.html",
+    "check": "npm run lint && npm run check:content && npm run check:schedule && npm run build",
     "check:content": "node scripts/check_content.mjs",
+    "check:schedule": "node scripts/check_schedule.mjs",
     "lint": "oxlint",
     "publish:legacy": "npm run build && node scripts/sync_pages_root.mjs",
     "preview": "vite preview"

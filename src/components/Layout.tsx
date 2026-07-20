@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { Nav } from "./Nav";
 import { NewsTicker } from "./NewsTicker";
 import { Footer } from "./Footer";
+import { WorkshopStatusProvider } from "@/components/WorkshopStatusProvider";
 
 /** Scroll to top on route change, or to the hash target when present. */
 function ScrollManager() {
@@ -24,7 +25,7 @@ function ScrollManager() {
 
 export function Layout() {
   return (
-    <>
+    <WorkshopStatusProvider>
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:border-2 focus:border-border focus:bg-paper focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase"
@@ -38,6 +39,6 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
-    </>
+    </WorkshopStatusProvider>
   );
 }

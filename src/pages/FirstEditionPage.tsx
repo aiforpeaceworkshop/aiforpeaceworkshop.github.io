@@ -110,7 +110,7 @@ export default function FirstEditionPage() {
       {/* Papers */}
       <section className="section">
         <div className="mx-auto max-w-6xl px-5">
-          <SectionHeading index="§03" kicker="Accepted papers" title="Non-archival, on OpenReview.">
+          <SectionHeading index="§03" kicker="OpenReview" title="Accepted papers.">
             The first edition ran a two-track, non-archival call. Of 28
             submissions, 13 were accepted as posters and 3 as oral presentations.
           </SectionHeading>

@@ -1,8 +1,11 @@
 import { ArrowUpRight, Mail } from "lucide-react";
 import { SITE, CURRENT_EDITION, NAV_LINKS } from "@/data/site";
 import { BrandWordmark } from "@/components/BrandWordmark";
+import { useWorkshopStatus } from "@/hooks/useWorkshopStatus";
 
 export function Footer() {
+  const workshopStatus = useWorkshopStatus();
+
   return (
     <footer id="contact" className="border-t-2 border-border bg-ink text-background">
       <div className="mx-auto max-w-6xl px-5 py-16">
@@ -43,14 +46,23 @@ export function Footer() {
             <span className="kicker text-background/50">Elsewhere</span>
             <ul className="mt-4 space-y-2.5">
               <li>
-                <a
-                  href={SITE.submissionUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 font-mono text-sm text-background/80 transition-colors hover:text-background"
-                >
-                  Submission form <ArrowUpRight className="h-3.5 w-3.5" />
-                </a>
+                {workshopStatus.submissionsOpen ? (
+                  <a
+                    href={SITE.submissionUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 font-mono text-sm text-background/80 transition-colors hover:text-background"
+                  >
+                    Submission form <ArrowUpRight className="h-3.5 w-3.5" />
+                  </a>
+                ) : (
+                  <a
+                    href="/#call"
+                    className="font-mono text-sm text-background/80 transition-colors hover:text-background"
+                  >
+                    Call for presentations · {workshopStatus.navLabel}
+                  </a>
+                )}
               </li>
             </ul>
           </div>

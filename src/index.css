@@ -355,6 +355,8 @@
   .btn-accent { background-color: var(--accent); color: var(--accent-foreground); }
   .btn-ink { background-color: var(--ink); color: var(--background); }
   .btn-ghost { background-color: transparent; color: var(--foreground); }
+  .btn[aria-disabled="true"] { cursor: default; opacity: 0.65; box-shadow: 2px 2px 0 var(--border); }
+  .btn[aria-disabled="true"]:hover { transform: none; box-shadow: 2px 2px 0 var(--border); }
 
   /* Chip / pill */
   .chip {

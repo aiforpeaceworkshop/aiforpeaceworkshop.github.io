@@ -3,7 +3,7 @@
 The site is built as static files and published to GitHub Pages from GitHub
 Actions.
 
-## One-time repository setting
+## Preferred repository setting
 
 In the GitHub repository:
 
@@ -15,6 +15,20 @@ The organization site is served from the domain root, so Vite uses `/` as its
 base path. If the repository is moved to a project path such as
 `example.github.io/aiforpeace/`, update the Vite base configuration before
 deploying.
+
+Changing the Pages source requires repository-admin access. Until an
+administrator switches it, the current legacy branch-based site can be updated
+with:
+
+```bash
+npm run publish:legacy
+git add .nojekyll 404.html assets favicon.svg first-edition img index.html
+```
+
+This commits a production snapshot at the repository root, which is the source
+served by the legacy setting. The source application remains under `src/` and
+`public/`, with its HTML template at `app/index.html`; do not edit the root
+snapshot by hand.
 
 ## Automatic release
 
@@ -30,6 +44,10 @@ The workflow:
 
 Deployments can also be started manually from **Actions → Deploy to GitHub
 Pages → Run workflow**.
+
+The workflow artifact becomes the live site after the preferred GitHub Actions
+source setting is enabled. On the legacy source setting, run
+`npm run publish:legacy` before committing.
 
 ## Release checklist
 
@@ -81,6 +99,10 @@ permissions:
   pages: write
   id-token: write
 ```
+
+If the workflow succeeds but the public site still serves repository-root
+files, Pages is still using the legacy branch source. Ask an administrator to
+switch the source, or publish the compatibility snapshot described above.
 
 ### Assets work locally but not on GitHub Pages
 

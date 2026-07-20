@@ -9,6 +9,7 @@
     "check": "npm run lint && npm run check:content && npm run build",
     "check:content": "node scripts/check_content.mjs",
     "lint": "oxlint",
+    "publish:legacy": "npm run build && node scripts/sync_pages_root.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

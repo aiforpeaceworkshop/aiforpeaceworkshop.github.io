@@ -84,12 +84,14 @@ source. Do not upscale small images or use search-result thumbnails.
 ```text
 .
 ├── .github/workflows/       GitHub Pages deployment
+├── app/index.html           Vite source HTML template
 ├── docs/                    Content, design, QA, and release guides
 ├── public/
 │   ├── favicon.svg          Square browser icon
 │   └── img/                 Wordmark assets and portraits
 ├── scripts/
-│   └── generate_logo.py     Rebuilds optimized wordmark masks
+│   ├── generate_logo.py     Rebuilds optimized wordmark masks
+│   └── sync_pages_root.mjs  Refreshes the legacy Pages snapshot
 └── src/
     ├── components/          Page sections and shared UI
     ├── data/site.ts         Structured workshop content
@@ -123,13 +125,19 @@ rules.
 A push to `master` runs
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The workflow
 installs dependencies with `npm ci`, builds the static site, and publishes
-`dist/` through GitHub Pages.
+`dist/` through GitHub Pages. While the repository remains on its legacy
+branch-based Pages setting, `npm run publish:legacy` also refreshes the
+production snapshot served from the repository root.
 
 Repository setting required:
 
 ```text
 Settings → Pages → Build and deployment → Source: GitHub Actions
 ```
+
+Changing that setting requires repository-admin access. The compatibility
+snapshot can be removed after an administrator switches Pages to GitHub
+Actions.
 
 Use the [quality checklist](docs/QUALITY.md) before release and the
 [deployment guide](docs/DEPLOYMENT.md) for the full publishing procedure and

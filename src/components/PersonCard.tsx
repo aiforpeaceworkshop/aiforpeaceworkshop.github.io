@@ -51,9 +51,11 @@ export function PersonCard({
             <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground transition-colors group-hover:text-accent" />
           )}
         </div>
-        <p className="font-mono text-xs leading-snug text-muted-foreground">
-          {person.affil}
-        </p>
+        {person.affil && (
+          <p className="font-mono text-xs leading-snug text-muted-foreground">
+            {person.affil}
+          </p>
+        )}
         {person.topic && (
           <p className="mt-2 border-t border-line pt-2 text-sm italic leading-snug text-foreground/80">
             “{person.topic}”

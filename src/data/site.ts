@@ -83,7 +83,7 @@ export const CFP_TOPICS = [
 
 export type Person = {
   name: string;
-  affil: string;
+  affil?: string;
   affilLink?: string;
   webpage?: string;
   img?: string;
@@ -115,8 +115,6 @@ export const ORGANIZERS: Person[] = [
   {
     name: "Yannis Kalantidis",
     role: "Program Chair — Presentations",
-    affil: "NAVER LABS Europe",
-    affilLink: "https://europe.naverlabs.com",
     webpage: "https://www.skamalas.com",
     img: "/img/organizers/yanniskalantidis.jpg",
   },
@@ -147,7 +145,8 @@ export const ORGANIZERS: Person[] = [
 ];
 
 /**
- * Invited speakers — NeurIPS 2026 (Paris).
+ * Proposed invited speakers — NeurIPS 2026 (Paris).
+ * Keep unpublished until individual participation is confirmed.
  * Order: alphabetical by last name (per the proposal).
  */
 export const NEURIPS_SPEAKERS: Person[] = [
@@ -241,13 +240,6 @@ export const FIRST_EDITION_SPEAKERS: Person[] = [
     webpage: "https://thegoodailab.org/team/pier-luigi-dovesi",
     img: "/img/speakers/pierluigidovesi.jpg",
   },
-  {
-    name: "Timnit Gebru",
-    affil: "The DAIR Institute",
-    affilLink: "https://www.dair-institute.org",
-    webpage: "https://www.dair-institute.org/team/timnit-gebru/",
-    img: "/img/speakers/timnitgebru.jpg",
-  },
 ];
 
 /**
@@ -292,8 +284,6 @@ export const FIRST_EDITION_ORGANIZERS: Person[] = [
   },
   {
     name: "Yannis Kalantidis",
-    affil: "NAVER LABS Europe",
-    affilLink: "https://europe.naverlabs.com",
     webpage: "https://www.skamalas.com",
     img: "/img/organizers/yanniskalantidis.jpg",
   },

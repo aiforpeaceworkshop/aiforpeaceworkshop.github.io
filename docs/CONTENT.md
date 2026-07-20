@@ -52,12 +52,13 @@ People use the `Person` type:
 }
 ```
 
-Only `name` and `affil` are required by the type. In practice, add a verified
-profile and portrait whenever they are available.
+Only `name` is required by the type. In practice, add a verified affiliation,
+profile, and portrait whenever they are available.
 
 Keep the organizer order from the approved proposal. Keep the first-edition
-speaker and organizer order from the original website. Current invited speakers
-are ordered alphabetically by last name, as stated in the proposal.
+speaker and organizer order from the original website. Publish current invited
+speakers only after their participation is confirmed; order them alphabetically
+by last name, as stated in the proposal.
 
 ## Portraits
 

@@ -33,6 +33,10 @@ export function About() {
               protection, and international law. It also includes a facilitated
               discussion and an after-workshop social.
             </p>
+            <p className="mt-5 text-base font-semibold leading-relaxed text-background md:text-lg">
+              We reject the normalization of AI for military and surveillance
+              systems.
+            </p>
           </Reveal>
 
           <Reveal className="md:col-span-5" delay={80}>

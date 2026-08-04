@@ -69,6 +69,13 @@ export const OBJECTIVES = [
 
 /* ---- Call for presentations (NeurIPS 2026) ----------------- */
 
+/**
+ * Explicit stance, so the call does not attract pro-military submissions.
+ * Adapted from the workshop's own positioning language.
+ */
+export const CFP_POSITION =
+  "We reject the normalization of AI for military and surveillance systems, recognizing that these technologies amplify violence and erode civil liberties.";
+
 export const CFP_TOPICS = [
   "Studies investigating how basic research transitions into military applications.",
   "Effects of AI militarization on marginalized communities and global inequalities.",
@@ -77,6 +84,13 @@ export const CFP_TOPICS = [
   "Historical or comparative analyses of dual-use technology governance.",
   "Sociotechnical audits of existing military AI systems.",
   "Whistleblowing mechanisms and academic responsibility in high-risk research.",
+];
+
+/** Out of scope — carried over from the first-edition call for papers. */
+export const CFP_EXCLUSIONS = [
+  "Promotion, optimization, or deployment of military or weapons-related AI systems.",
+  "Defense-oriented AI research without a critical, ethical, or governance perspective.",
+  "AI safety or alignment work with no connection to militarization, conflict, or peace.",
 ];
 
 /* ---- People ------------------------------------------------ */

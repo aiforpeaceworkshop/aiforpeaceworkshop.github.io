@@ -1,7 +1,7 @@
-import { ArrowUpRight, Check, FileText, Mic2, LayoutGrid } from "lucide-react";
+import { ArrowUpRight, Check, X, FileText, Mic2, LayoutGrid } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
-import { SITE, CFP_TOPICS, CURRENT_EDITION } from "@/data/site";
+import { SITE, CFP_TOPICS, CFP_EXCLUSIONS, CFP_POSITION, CURRENT_EDITION } from "@/data/site";
 import { CFP_TIMELINE, WORKSHOP_SCHEDULE } from "@/data/workshopSchedule";
 import { cn } from "@/lib/utils";
 import { useWorkshopStatus } from "@/hooks/useWorkshopStatus";
@@ -28,6 +28,15 @@ export function CallForPresentations() {
           below. Every accepted contribution will be presented as a poster.
         </SectionHeading>
 
+        <Reveal className="mb-10">
+          <div className="ink-card ink-card-alert border-alert p-5 sm:p-6">
+            <span className="kicker text-alert">Our position</span>
+            <p className="mt-3 max-w-3xl text-base font-medium leading-relaxed text-foreground sm:text-lg">
+              {CFP_POSITION}
+            </p>
+          </div>
+        </Reveal>
+
         <div className="grid gap-10 lg:grid-cols-12">
           {/* Left: facts + topics */}
           <div className="lg:col-span-7">
@@ -50,6 +59,20 @@ export function CallForPresentations() {
                   <li key={t} className="flex gap-3">
                     <Check className="mt-1 h-4 w-4 shrink-0 text-accent" />
                     <span className="text-sm text-foreground/90 sm:text-base">{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal className="mt-8" delay={80}>
+              <h3 className="font-sans text-lg font-semibold tracking-tight">
+                Out of scope
+              </h3>
+              <ul className="mt-4 space-y-3">
+                {CFP_EXCLUSIONS.map((t) => (
+                  <li key={t} className="flex gap-3">
+                    <X className="mt-1 h-4 w-4 shrink-0 text-alert" />
+                    <span className="text-sm text-muted-foreground sm:text-base">{t}</span>
                   </li>
                 ))}
               </ul>

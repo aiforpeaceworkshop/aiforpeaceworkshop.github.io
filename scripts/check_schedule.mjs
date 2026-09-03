@@ -21,8 +21,8 @@ const { getWorkshopStatus } = await import(
 const cases = [
   ["2026-07-18T11:59:59.999Z", "upcoming", false, "open"],
   ["2026-07-18T12:00:00.000Z", "open", true, "deadline"],
-  ["2026-09-15T11:59:59.999Z", "open", true, "deadline"],
-  ["2026-09-15T12:00:00.000Z", "review", false, "decision"],
+  ["2026-09-22T11:59:59.999Z", "open", true, "deadline"],
+  ["2026-09-22T12:00:00.000Z", "review", false, "decision"],
   ["2026-09-30T12:00:00.000Z", "scheduled", false, "workshop"],
   ["2026-12-12T12:00:00.000Z", "workshop", false, "workshop"],
   ["2026-12-14T12:00:00.000Z", "concluded", false, null],

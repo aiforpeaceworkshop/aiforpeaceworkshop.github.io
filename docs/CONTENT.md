@@ -116,7 +116,7 @@ When updating the call:
 2. Update `CFP_TIMELINE` and `WORKSHOP_SCHEDULE` together.
 3. Check the submission form URL in `SITE.submissionUrl`.
 4. Express end-of-day deadlines as AoE (`UTC−12`) boundaries. For example,
-   September 14 AoE ends at `2026-09-15T12:00:00Z`.
+   September 21 AoE ends at `2026-09-22T12:00:00Z`.
 5. Update each grounded phase message without claiming that notifications were
    sent or an event occurred solely because its scheduled date passed.
 6. Run `npm run check:schedule`, then inspect the mobile timeline for wrapping.

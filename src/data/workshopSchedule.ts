@@ -1,14 +1,14 @@
 /*
  * Workshop schedule and date-aware status.
  *
- * Anywhere on Earth (AoE) is UTC−12. A deadline dated September 14 therefore
- * remains open until 2026-09-15T12:00:00Z, when September 14 ends in AoE.
+ * Anywhere on Earth (AoE) is UTC−12. A deadline dated September 21 therefore
+ * remains open until 2026-09-22T12:00:00Z, when September 21 ends in AoE.
  */
 
 export const WORKSHOP_SCHEDULE = {
   timeZoneLabel: "AoE (UTC−12)",
   submissionsOpenAt: "2026-07-18T12:00:00.000Z",
-  submissionsCloseAt: "2026-09-15T12:00:00.000Z",
+  submissionsCloseAt: "2026-09-22T12:00:00.000Z",
   decisionDateEndsAt: "2026-09-30T12:00:00.000Z",
   workshopWindowStartsAt: "2026-12-12T12:00:00.000Z",
   workshopWindowEndsAt: "2026-12-14T12:00:00.000Z",
@@ -24,7 +24,7 @@ export type TimelineItem = {
 
 export const CFP_TIMELINE: TimelineItem[] = [
   { id: "open", date: "Jul 18, 2026", event: "Submission site opens" },
-  { id: "deadline", date: "Sep 14, 2026", event: "Submission deadline" },
+  { id: "deadline", date: "Sep 21, 2026", event: "Submission deadline" },
   { id: "decision", date: "Sep 29, 2026", event: "Decision notification" },
   { id: "workshop", date: "Dec 12 or 13, 2026", event: "Workshop day (TBC)" },
 ];
@@ -88,13 +88,13 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
       submissionsOpen: true,
       announcement: {
         date: "2026.07.18",
-        text: "Call for presentations is open. Submit by September 14 (AoE).",
+        text: "Call for presentations is open. Submit by September 21 (AoE).",
         href: "submission",
       },
       navLabel: "Submit",
       heroActionLabel: "Submit a presentation",
       callActionLabel: "Submit an abstract",
-      callNote: "Deadline: September 14, 2026, Anywhere on Earth.",
+      callNote: "Deadline: September 21, 2026, Anywhere on Earth.",
       currentTimelineId: "deadline",
       completedTimelineIds: ["open"],
     };
@@ -105,7 +105,7 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
       phase: "review",
       submissionsOpen: false,
       announcement: {
-        date: "2026.09.15",
+        date: "2026.09.22",
         text: "Submissions are closed. Decision notification is September 29.",
         href: "/#call",
       },

@@ -22,7 +22,7 @@ and concluded transitions at their exact AoE boundaries.
 
 During local development, append `?statusAt=<ISO timestamp>` to preview a phase
 without changing the system clock. This override is excluded from production.
-For example, `?statusAt=2026-09-15T12:00:00Z` previews the closed/review state.
+For example, `?statusAt=2026-09-22T12:00:00Z` previews the closed/review state.
 
 ## Content integrity
 

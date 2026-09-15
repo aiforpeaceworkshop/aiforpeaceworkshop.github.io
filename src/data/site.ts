@@ -20,8 +20,7 @@ export const CURRENT_EDITION = {
   venue: "NeurIPS 2026",
   city: "Paris, France",
   place: "NeurIPS 2026 · Paris",
-  dateLabel: "Dec 12 or 13, 2026",
-  dateNote: "Exact workshop day to be confirmed.",
+  dateLabel: "Saturday, Dec 12, 2026",
   format: "One-day, in-person workshop",
 } as const;
 

@@ -89,7 +89,7 @@ export function CallForPresentations() {
                       TIMELINE
                     </span>
                     <span className="font-mono text-[0.62rem] font-bold uppercase tracking-wide text-background/60">
-                      All dates · {WORKSHOP_SCHEDULE.timeZoneLabel}
+                      Deadlines · {WORKSHOP_SCHEDULE.timeZoneLabel}
                     </span>
                   </div>
                 </div>

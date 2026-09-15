@@ -48,7 +48,7 @@ export function Hero() {
             <dd>{CURRENT_EDITION.city}</dd>
           </div>
           <div>
-            <dt>Date · TBC</dt>
+            <dt>Date</dt>
             <dd>{CURRENT_EDITION.dateLabel}</dd>
           </div>
         </dl>

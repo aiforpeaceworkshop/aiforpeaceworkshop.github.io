@@ -24,8 +24,10 @@ const cases = [
   ["2026-09-22T11:59:59.999Z", "open", true, "deadline"],
   ["2026-09-22T12:00:00.000Z", "review", false, "decision"],
   ["2026-09-30T12:00:00.000Z", "scheduled", false, "workshop"],
-  ["2026-12-12T12:00:00.000Z", "workshop", false, "workshop"],
-  ["2026-12-14T12:00:00.000Z", "concluded", false, null],
+  ["2026-12-11T22:59:59.999Z", "scheduled", false, "workshop"],
+  ["2026-12-11T23:00:00.000Z", "workshop", false, "workshop"],
+  ["2026-12-12T22:59:59.999Z", "workshop", false, "workshop"],
+  ["2026-12-12T23:00:00.000Z", "concluded", false, null],
 ];
 
 for (const [iso, expectedPhase, expectedOpen, expectedCurrent] of cases) {
@@ -42,4 +44,4 @@ for (const [iso, expectedPhase, expectedOpen, expectedCurrent] of cases) {
   }
 }
 
-console.log(`Schedule check passed: ${cases.length} AoE boundary cases.`);
+console.log(`Schedule check passed: ${cases.length} AoE deadline and Paris workshop boundary cases.`);

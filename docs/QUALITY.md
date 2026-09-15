@@ -17,8 +17,9 @@ npm run check
 TypeScript project check and creates `dist/index.html`,
 `dist/iclr-2026/index.html`, a compatibility entry at
 `dist/first-edition/index.html`, and the general `dist/404.html` fallback.
-It also tests the upcoming, open, review, post-notification, workshop-window,
-and concluded transitions at their exact AoE boundaries.
+It also tests the upcoming, open, review, post-notification, workshop-day,
+and concluded transitions at their exact boundaries: AoE for submissions and
+Paris local time for the workshop.
 
 During local development, append `?statusAt=<ISO timestamp>` to preview a phase
 without changing the system clock. This override is excluded from production.

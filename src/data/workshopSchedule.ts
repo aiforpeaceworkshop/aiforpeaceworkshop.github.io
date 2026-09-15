@@ -3,6 +3,7 @@
  *
  * Anywhere on Earth (AoE) is UTC−12. A deadline dated September 21 therefore
  * remains open until 2026-09-22T12:00:00Z, when September 21 ends in AoE.
+ * The workshop day follows Paris local time (CET, UTC+1 in December).
  */
 
 export const WORKSHOP_SCHEDULE = {
@@ -10,8 +11,8 @@ export const WORKSHOP_SCHEDULE = {
   submissionsOpenAt: "2026-07-18T12:00:00.000Z",
   submissionsCloseAt: "2026-09-22T12:00:00.000Z",
   decisionDateEndsAt: "2026-09-30T12:00:00.000Z",
-  workshopWindowStartsAt: "2026-12-12T12:00:00.000Z",
-  workshopWindowEndsAt: "2026-12-14T12:00:00.000Z",
+  workshopWindowStartsAt: "2026-12-12T00:00:00+01:00",
+  workshopWindowEndsAt: "2026-12-13T00:00:00+01:00",
 } as const;
 
 export type TimelineId = "open" | "deadline" | "decision" | "workshop";
@@ -26,7 +27,7 @@ export const CFP_TIMELINE: TimelineItem[] = [
   { id: "open", date: "Jul 18, 2026", event: "Submission site opens" },
   { id: "deadline", date: "Sep 21, 2026", event: "Submission deadline" },
   { id: "decision", date: "Sep 29, 2026", event: "Decision notification" },
-  { id: "workshop", date: "Dec 12 or 13, 2026", event: "Workshop day (TBC)" },
+  { id: "workshop", date: "Sat, Dec 12, 2026", event: "Workshop day (Paris)" },
 ];
 
 export type WorkshopPhase =
@@ -124,10 +125,10 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
       submissionsOpen: false,
       announcement: {
         date: "2026.09.30",
-        text: "Next: AI for Peace at NeurIPS 2026, December 12 or 13 in Paris.",
+        text: "Next: AI for Peace at NeurIPS 2026, Saturday, December 12 in Paris.",
         href: "/#top",
       },
-      navLabel: "Dec 12/13",
+      navLabel: "Dec 12",
       heroActionLabel: "Submissions closed",
       callActionLabel: "Submissions closed",
       callNote: "The submission deadline has passed.",
@@ -142,13 +143,13 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
       submissionsOpen: false,
       announcement: {
         date: "2026.12.12",
-        text: "Workshop date window: December 12 or 13, Paris.",
+        text: "AI for Peace is scheduled for Saturday, December 12, 2026 in Paris.",
         href: "/#top",
       },
       navLabel: "Workshop",
       heroActionLabel: "Submissions closed",
       callActionLabel: "Submissions closed",
-      callNote: "The workshop day is December 12 or 13 (TBC).",
+      callNote: "The workshop day is Saturday, December 12, 2026 in Paris.",
       currentTimelineId: "workshop",
       completedTimelineIds: ["open", "deadline", "decision"],
     };
@@ -158,7 +159,7 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
     phase: "concluded",
     submissionsOpen: false,
     announcement: {
-      date: "2026.12.14",
+      date: "2026.12.13",
       text: "The scheduled NeurIPS 2026 workshop date has passed.",
       href: "/#about",
     },

@@ -394,4 +394,5 @@ export const REFERENCES: Reference[] = [
   { n: 14, text: "J. Filipi et al. Honeybee-based biohybrid system for landmine detection. Science of the Total Environment, 803:150041, 2022.", href: "https://www.sciencedirect.com/science/article/pii/S0048969721051160" },
   { n: 15, text: "Amnesty International. Automated Apartheid: How facial recognition fragments, segregates and controls Palestinians in the OPT, 2023.", href: "https://www.amnesty.org/en/documents/mde15/6701/2023/en/" },
   { n: 16, text: "S. Goodfriend. Algorithmic state violence: Automated surveillance and Palestinian dispossession in Hebron's old city. International Journal of Middle East Studies, 55(3):461–478, 2023.", href: "https://doi.org/10.1017/S0020743823000879" },
+  { n: 17, text: "P. L. Dovesi. From self-driving cars to self-driving wars. The Good AI Lab, January 1, 2026.", href: "https://thegoodailab.org/blog/from-self-driving-cars-to-self-driving-wars" },
 ];

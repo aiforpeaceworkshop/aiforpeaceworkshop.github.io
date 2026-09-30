@@ -6,7 +6,7 @@ export function AcceptedTalks() {
     <section id="accepted-talks" className="section-tight border-y-2 border-border bg-paper">
       <div className="mx-auto max-w-6xl px-5">
         <div className="section-heading-label">
-          <span className="section-index" aria-hidden="true">05</span>
+          <span className="section-index" aria-hidden="true">04</span>
           <span className="section-kicker">Contributed presentations · {CURRENT_EDITION.venue}</span>
           <span className="pixel-rule-sm h-[3px] flex-1 text-line" />
         </div>

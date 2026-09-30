@@ -7,7 +7,7 @@ export function Organizers() {
   return (
     <section id="organizers" className="section border-t-2 border-border bg-paper">
       <div className="mx-auto max-w-6xl px-5">
-        <SectionHeading index="§04" kicker="Organizing committee" title="Organizing committee.">
+        <SectionHeading index="§05" kicker="Organizing committee" title="Organizing committee.">
           The committee spans computer vision, machine learning, and digital
           humanities.
         </SectionHeading>

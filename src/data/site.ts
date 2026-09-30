@@ -44,8 +44,8 @@ export const NAV_LINKS = [
   { label: "About", href: "/#about" },
   { label: "Call", href: "/#call" },
   { label: "Speakers", href: "/#speakers" },
-  { label: "Organizers", href: "/#organizers" },
   { label: "Talks", href: "/#accepted-talks" },
+  { label: "Organizers", href: "/#organizers" },
   { label: "First edition", href: "/iclr-2026" },
   { label: "Contact", href: "/#contact" },
 ] as const;

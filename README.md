@@ -71,6 +71,7 @@ Date-driven submission states live separately in
 | Call topics | `CFP_TOPICS` |
 | Call dates and AoE boundaries | `CFP_TIMELINE`, `WORKSHOP_SCHEDULE` |
 | NeurIPS organizers | `ORGANIZERS` |
+| NeurIPS accepted talks | `ACCEPTED_TALKS` |
 | NeurIPS invited speakers | `NEURIPS_SPEAKERS` |
 | ICLR archive | `FIRST_EDITION_*` |
 | Bibliography | `REFERENCES` |

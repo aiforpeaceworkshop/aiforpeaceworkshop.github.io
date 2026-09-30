@@ -8,7 +8,7 @@ export function FirstEditionTeaser() {
   return (
     <section id="first-edition" className="section">
       <div className="mx-auto max-w-6xl px-5">
-        <SectionHeading index="§05" kicker="The archive" title="AI for Peace at ICLR 2026." />
+        <SectionHeading index="§06" kicker="The archive" title="AI for Peace at ICLR 2026." />
 
         <Reveal>
           <Link

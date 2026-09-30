@@ -45,6 +45,7 @@ export const NAV_LINKS = [
   { label: "Call", href: "/#call" },
   { label: "Speakers", href: "/#speakers" },
   { label: "Organizers", href: "/#organizers" },
+  { label: "Talks", href: "/#accepted-talks" },
   { label: "First edition", href: "/iclr-2026" },
   { label: "Contact", href: "/#contact" },
 ] as const;
@@ -90,6 +91,69 @@ export const CFP_EXCLUSIONS = [
   "Promotion, optimization, or deployment of military or weapons-related AI systems.",
   "Defense-oriented AI research without a critical, ethical, or governance perspective.",
   "AI safety or alignment work with no connection to militarization, conflict, or peace.",
+];
+
+/* ---- Accepted talks (NeurIPS 2026) --------------------------- */
+
+export type AcceptedTalk = {
+  title: string;
+  authors: string;
+};
+
+/** Titles, author order, and affiliations supplied by the organizers. */
+export const ACCEPTED_TALKS: AcceptedTalk[] = [
+  {
+    title: "Geopolitics of Niobium: The DR Congo in the Aerospace Era.",
+    authors: "Laure Gnassou",
+  },
+  {
+    title: "Direct Causation in International Humanitarian Law and the Challenge of AI-Mediated Civilian Cyber Operations.",
+    authors: "Alice Saito (University of Tokyo)",
+  },
+  {
+    title: "Safeguarding Testimony Archives: An Ethical Impact Assessment Framework with Preliminary Red Team Validation.",
+    authors: "Nathan Heath (Syntony; The AIHL Project), Susan Nesbitt (The Cantellus Group), Jennifer Victoria Scurrell (University of Zurich), Broderick McDonald (The Alan Turing Institute; University of Oxford)",
+  },
+  {
+    title: "When General-Purpose Language Models Supply Dual-Use Expertise: A Forensic Signal for Peace-Oriented AI Governance.",
+    authors: "Manodyna KH, Samarth Ramesh",
+  },
+  {
+    title: "Who Maps the Crisis? Community-Governed AI for Peacebuilding and Disaster Response.",
+    authors: "Rebecca Firth (Humanitarian OpenStreetMap Team)",
+  },
+  {
+    title: "Complex systems modelling for informing peace-building efforts.",
+    authors: "Joseph Aylett-Bullock (University of Bristol)",
+  },
+  {
+    title: "Designing for De-escalation: Goal Framing for Strategic Decision-Making in High-Stakes Scenarios.",
+    authors: "Carlos Toxtli (Clemson University), Manuel Delaflor (Metacognition Institute)",
+  },
+  {
+    title: "The Philosophical Grounds of a Duty, not just a Right, to Resist Injustice.",
+    authors: "Annette Zimmermann (University of Wisconsin-Madison)",
+  },
+  {
+    title: "Non-State Armed Groups and the Limits of AI Safeguards and Evaluations.",
+    authors: "Panashe Zowa (Independent)",
+  },
+  {
+    title: "From Human Rights Evidence to Responsible AI for Peace: Lessons from Conflict-Affected Yemen.",
+    authors: "Khaled Ayesh Abdullah Sagheer (National Forum for Human Rights, Yemen)",
+  },
+  {
+    title: "Watching the Watched, Blinding the Watchers: Military-Origin Facial Recognition and the Erosion of Police Accountability in Brazil.",
+    authors: "Jaysa Keylla Siqueira Barbosa (Federal University of Rio Grande do Norte)",
+  },
+  {
+    title: "MAESTRO4IHL: A Threat Model Framework for Synthetic Media Harms to POW Protections under IHL.",
+    authors: "Nathan Heath (Syntony; The AIHL Project), Dr. Wm. Matthew Kennedy (King's College London), Valmik Nahata (University of California San Diego)",
+  },
+  {
+    title: "Mapping Military AI from Corporate Filings and Public Award Records.",
+    authors: "Hadi Asghari (TU Berlin)",
+  },
 ];
 
 /* ---- People ------------------------------------------------ */

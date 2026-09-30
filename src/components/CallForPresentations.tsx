@@ -144,7 +144,7 @@ export function CallForPresentations() {
                                 current ? "font-bold" : "font-medium",
                               )}
                             >
-                              {item.event}
+                              {item.id === "decision" && done ? "Decisions released" : item.event}
                             </span>
                           </div>
                           <span className="font-mono text-xs font-bold uppercase tracking-wide text-muted-foreground">

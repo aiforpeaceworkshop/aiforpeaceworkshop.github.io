@@ -23,6 +23,8 @@ const cases = [
   ["2026-07-18T12:00:00.000Z", "open", true, "deadline"],
   ["2026-09-22T11:59:59.999Z", "open", true, "deadline"],
   ["2026-09-22T12:00:00.000Z", "review", false, "decision"],
+  ["2026-09-30T00:24:59.999Z", "review", false, "decision"],
+  ["2026-09-30T00:25:00.000Z", "scheduled", false, "workshop"],
   ["2026-09-30T12:00:00.000Z", "scheduled", false, "workshop"],
   ["2026-12-11T22:59:59.999Z", "scheduled", false, "workshop"],
   ["2026-12-11T23:00:00.000Z", "workshop", false, "workshop"],
@@ -44,4 +46,15 @@ for (const [iso, expectedPhase, expectedOpen, expectedCurrent] of cases) {
   }
 }
 
-console.log(`Schedule check passed: ${cases.length} AoE deadline and Paris workshop boundary cases.`);
+const released = getWorkshopStatus(new Date("2026-09-30T00:25:00.000Z"));
+const beforeRelease = getWorkshopStatus(new Date("2026-09-30T00:24:59.999Z"));
+if (
+  !released.completedTimelineIds.includes("decision")
+  || beforeRelease.completedTimelineIds.includes("decision")
+  || released.announcement.href !== "/#accepted-talks"
+  || !released.callNote.includes("Decisions have been released")
+) {
+  throw new Error("Confirmed decisions must complete the timeline step and link to accepted talks before the planned AoE boundary.");
+}
+
+console.log(`Schedule check passed: ${cases.length} submission, confirmed-decision, and workshop boundary cases.`);

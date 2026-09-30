@@ -10,7 +10,8 @@ export const WORKSHOP_SCHEDULE = {
   timeZoneLabel: "AoE (UTC−12)",
   submissionsOpenAt: "2026-07-18T12:00:00.000Z",
   submissionsCloseAt: "2026-09-22T12:00:00.000Z",
-  decisionDateEndsAt: "2026-09-30T12:00:00.000Z",
+  // Organizer confirmation: September 30 at 02:25 CEST.
+  decisionsReleasedAt: "2026-09-30T00:25:00.000Z",
   workshopWindowStartsAt: "2026-12-12T00:00:00+01:00",
   workshopWindowEndsAt: "2026-12-13T00:00:00+01:00",
 } as const;
@@ -57,7 +58,7 @@ export type WorkshopStatus = {
 const SCHEDULE_MS = {
   submissionsOpenAt: Date.parse(WORKSHOP_SCHEDULE.submissionsOpenAt),
   submissionsCloseAt: Date.parse(WORKSHOP_SCHEDULE.submissionsCloseAt),
-  decisionDateEndsAt: Date.parse(WORKSHOP_SCHEDULE.decisionDateEndsAt),
+  decisionsReleasedAt: Date.parse(WORKSHOP_SCHEDULE.decisionsReleasedAt),
   workshopWindowStartsAt: Date.parse(WORKSHOP_SCHEDULE.workshopWindowStartsAt),
   workshopWindowEndsAt: Date.parse(WORKSHOP_SCHEDULE.workshopWindowEndsAt),
 } as const;
@@ -101,19 +102,19 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
     };
   }
 
-  if (timestamp < SCHEDULE_MS.decisionDateEndsAt) {
+  if (timestamp < SCHEDULE_MS.decisionsReleasedAt) {
     return {
       phase: "review",
       submissionsOpen: false,
       announcement: {
-        date: "2026.09.30",
-        text: "Accepted talks for AI for Peace at NeurIPS 2026 are now available.",
-        href: "/#accepted-talks",
+        date: "2026.09.22",
+        text: "Submissions are closed. Decision notification is September 29 (AoE).",
+        href: "/#call",
       },
       navLabel: "Closed",
       heroActionLabel: "Submissions closed",
       callActionLabel: "Submissions closed",
-      callNote: "Submissions are closed. Accepted talks are available on this page.",
+      callNote: "Decision notification is scheduled for September 29 (AoE).",
       currentTimelineId: "decision",
       completedTimelineIds: ["open", "deadline"],
     };
@@ -125,13 +126,13 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
       submissionsOpen: false,
       announcement: {
         date: "2026.09.30",
-        text: "Explore the accepted talks for AI for Peace, December 12 in Paris.",
+        text: "Decisions have been released. Explore the accepted talks for NeurIPS 2026.",
         href: "/#accepted-talks",
       },
       navLabel: "Dec 12",
       heroActionLabel: "Submissions closed",
       callActionLabel: "Submissions closed",
-      callNote: "The submission deadline has passed.",
+      callNote: "Decisions have been released. Accepted talks are available on this page.",
       currentTimelineId: "workshop",
       completedTimelineIds: ["open", "deadline", "decision"],
     };

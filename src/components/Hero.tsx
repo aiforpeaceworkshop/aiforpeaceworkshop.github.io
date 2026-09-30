@@ -28,7 +28,7 @@ export function Hero() {
                 {workshopStatus.heroActionLabel} <ArrowUpRight className="h-4 w-4" />
               </a>
             ) : (
-              <a href="#call" className="btn btn-ghost">
+              <a href={workshopStatus.heroActionHref} className="btn btn-ghost">
                 {workshopStatus.heroActionLabel} <ArrowRight className="h-4 w-4" />
               </a>
             )}

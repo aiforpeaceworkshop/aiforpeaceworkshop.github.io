@@ -49,6 +49,7 @@ export type WorkshopStatus = {
   };
   navLabel: string;
   heroActionLabel: string;
+  heroActionHref: "#call" | "#accepted-talks";
   callActionLabel: string;
   callNote: string;
   currentTimelineId: TimelineId | null;
@@ -77,6 +78,7 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
       },
       navLabel: "Opens Jul 18",
       heroActionLabel: "Call opens July 18",
+      heroActionHref: "#call",
       callActionLabel: "Opens July 18",
       callNote: "Submissions open July 18, Anywhere on Earth.",
       currentTimelineId: "open",
@@ -95,6 +97,7 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
       },
       navLabel: "Submit",
       heroActionLabel: "Submit a presentation",
+      heroActionHref: "#call",
       callActionLabel: "Submit an abstract",
       callNote: "Deadline: September 21, 2026, Anywhere on Earth.",
       currentTimelineId: "deadline",
@@ -113,6 +116,7 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
       },
       navLabel: "Closed",
       heroActionLabel: "Submissions closed",
+      heroActionHref: "#call",
       callActionLabel: "Submissions closed",
       callNote: "Decision notification is scheduled for September 29 (AoE).",
       currentTimelineId: "decision",
@@ -130,7 +134,8 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
         href: "/#accepted-talks",
       },
       navLabel: "Dec 12",
-      heroActionLabel: "Submissions closed",
+      heroActionLabel: "View accepted talks",
+      heroActionHref: "#accepted-talks",
       callActionLabel: "Submissions closed",
       callNote: "Decisions have been released. Accepted talks are available on this page.",
       currentTimelineId: "workshop",
@@ -148,7 +153,8 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
         href: "/#top",
       },
       navLabel: "Workshop",
-      heroActionLabel: "Submissions closed",
+      heroActionLabel: "View accepted talks",
+      heroActionHref: "#accepted-talks",
       callActionLabel: "Submissions closed",
       callNote: "The workshop day is Saturday, December 12, 2026 in Paris.",
       currentTimelineId: "workshop",
@@ -165,7 +171,8 @@ export function getWorkshopStatus(now: Date = new Date()): WorkshopStatus {
       href: "/#about",
     },
     navLabel: "Past edition",
-    heroActionLabel: "Submissions closed",
+    heroActionLabel: "View accepted talks",
+    heroActionHref: "#accepted-talks",
     callActionLabel: "Submissions closed",
     callNote: "The submission period has ended.",
     currentTimelineId: null,

@@ -98,6 +98,7 @@ export const CFP_EXCLUSIONS = [
 export type AcceptedTalk = {
   title: string;
   authors: string;
+  resource?: { url: string; label: string };
 };
 
 /** Titles, author order, and affiliations supplied by the organizers. */
@@ -109,10 +110,12 @@ export const ACCEPTED_TALKS: AcceptedTalk[] = [
   {
     title: "Direct Causation in International Humanitarian Law and the Challenge of AI-Mediated Civilian Cyber Operations.",
     authors: "Alice Saito (University of Tokyo)",
+    resource: { url: "https://arxiv.org/abs/2606.29175", label: "arXiv paper" },
   },
   {
     title: "Safeguarding Testimony Archives: An Ethical Impact Assessment Framework with Preliminary Red Team Validation.",
     authors: "Nathan Heath (Syntony; The AIHL Project), Susan Nesbitt (The Cantellus Group), Jennifer Victoria Scurrell (University of Zurich), Broderick McDonald (The Alan Turing Institute; University of Oxford)",
+    resource: { url: "https://indico.cern.ch/event/1721046/", label: "Talk page" },
   },
   {
     title: "When General-Purpose Language Models Supply Dual-Use Expertise: A Forensic Signal for Peace-Oriented AI Governance.",
@@ -149,6 +152,7 @@ export const ACCEPTED_TALKS: AcceptedTalk[] = [
   {
     title: "MAESTRO4IHL: A Threat Model Framework for Synthetic Media Harms to POW Protections under IHL.",
     authors: "Nathan Heath (Syntony; The AIHL Project), Dr. Wm. Matthew Kennedy (King's College London), Valmik Nahata (University of California San Diego)",
+    resource: { url: "https://www.aihlproject.org/", label: "Project website" },
   },
   {
     title: "Mapping Military AI from Corporate Filings and Public Award Records.",

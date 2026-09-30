@@ -13,7 +13,7 @@ export function AcceptedTalks() {
         <details className="group">
           <summary className="flex cursor-pointer list-none flex-wrap items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
             <h2 className="text-2xl leading-tight tracking-tight sm:text-3xl">Accepted talks.</h2>
-            <span className="inline-flex items-center gap-3 border border-line bg-background px-4 py-2.5 font-mono text-xs text-muted-foreground transition-colors group-hover:border-foreground/40 group-hover:text-foreground">
+            <span className="inline-flex items-center gap-2 py-1 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground">
               <span className="group-open:hidden">View accepted talks</span>
               <span className="hidden group-open:inline">Hide accepted talks</span>
               <ChevronDown className="h-3.5 w-3.5 text-alert transition-transform group-open:rotate-180" aria-hidden="true" />

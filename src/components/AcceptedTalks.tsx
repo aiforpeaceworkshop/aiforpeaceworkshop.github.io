@@ -11,10 +11,21 @@ export function AcceptedTalks() {
           <span className="pixel-rule-sm h-[3px] flex-1 text-line" />
         </div>
         <details className="group">
-          <summary className="flex cursor-pointer list-none flex-wrap items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
-            <h2 className="text-2xl leading-tight tracking-tight sm:text-3xl">Accepted talks.</h2>
-            <span className="inline-flex items-center gap-2 py-1 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground">
-              <span className="group-open:hidden">View accepted talks</span>
+          <summary className="flex cursor-pointer list-none flex-wrap items-center justify-between gap-x-8 gap-y-4 [&::-webkit-details-marker]:hidden">
+            <div className="min-w-0 max-w-2xl">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <h2 className="text-2xl leading-tight tracking-tight sm:text-3xl">Accepted talks.</h2>
+                <span className="border-l border-line pl-4 font-mono text-xs text-alert">
+                  {ACCEPTED_TALKS.length} talks
+                </span>
+              </div>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                From humanitarian mapping and testimony archives to de-escalation
+                and accountability: research on AI, conflict, and peace.
+              </p>
+            </div>
+            <span className="inline-flex shrink-0 items-center gap-2 py-1 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground">
+              <span className="group-open:hidden">Explore the talks</span>
               <span className="hidden group-open:inline">Hide accepted talks</span>
               <ChevronDown className="h-3.5 w-3.5 text-alert transition-transform group-open:rotate-180" aria-hidden="true" />
             </span>

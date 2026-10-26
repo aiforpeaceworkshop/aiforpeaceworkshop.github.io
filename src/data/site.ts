@@ -237,7 +237,6 @@ export const NEURIPS_SPEAKERS: Person[] = [
     affilLink: "https://www.tcd.ie",
     webpage: "https://www.tcd.ie/scss/people/academic-staff/birhanea/",
     img: "/img/speakers/abebabirhane-tcd.jpg",
-    topic: "Machine learning: from research and application to downstream societal impacts",
   },
   {
     name: "Verity Coyle",
@@ -245,7 +244,6 @@ export const NEURIPS_SPEAKERS: Person[] = [
     affilLink: "https://www.hrw.org",
     webpage: "https://www.hrw.org/about/people/verity-coyle",
     img: "/img/speakers/veritycoyle.jpg",
-    topic: "From arms control to algorithmic warfare: regulating emerging military tech",
   },
   {
     name: "Juan Carlos De Martin",
@@ -253,7 +251,6 @@ export const NEURIPS_SPEAKERS: Person[] = [
     affilLink: "https://www.polito.it/en",
     webpage: "https://demartin.polito.it",
     img: "/img/speakers/juancarlosdemartin.jpg",
-    topic: "Academic research and the right to refusal of militarisation",
   },
   {
     name: "Branka Marijan",
@@ -261,7 +258,6 @@ export const NEURIPS_SPEAKERS: Person[] = [
     affilLink: "https://munkschool.utoronto.ca",
     webpage: "https://munkschool.utoronto.ca/person/branka-marijan",
     img: "/img/speakers/brankamarijan.jpg",
-    topic: "The struggle to regulate military AI and autonomous weapons",
   },
   {
     name: "Joseph Redmon",
@@ -269,7 +265,6 @@ export const NEURIPS_SPEAKERS: Person[] = [
     affilLink: "https://allenai.org",
     webpage: "https://pjreddie.com/",
     img: "/img/speakers/josephredmon.jpg",
-    topic: "The real AI alignment problem",
   },
   {
     name: "David Gray Widder",
@@ -277,7 +272,6 @@ export const NEURIPS_SPEAKERS: Person[] = [
     affilLink: "https://www.utexas.edu",
     webpage: "https://davidwidder.me/",
     img: "/img/speakers/davidgraywidder.jpg",
-    topic: "Basic research, lethal effects: on academic–military entanglement and complicity",
   },
 ];
 

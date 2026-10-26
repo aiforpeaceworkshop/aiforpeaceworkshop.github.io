@@ -7,8 +7,8 @@ import {
   FIRST_EDITION,
 } from "@/data/site";
 
-// Flip this once the invited speakers have individually confirmed.
-const SHOW_NEURIPS_SPEAKERS = false;
+// Speaker publication authorized by the organizers.
+const SHOW_NEURIPS_SPEAKERS = true;
 
 export function Speakers() {
   return (

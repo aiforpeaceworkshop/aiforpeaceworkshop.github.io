@@ -226,8 +226,8 @@ export const ORGANIZERS: Person[] = [
 ];
 
 /**
- * Proposed invited speakers — NeurIPS 2026 (Paris).
- * Keep unpublished until individual participation is confirmed.
+ * Invited speakers — NeurIPS 2026 (Paris).
+ * Publication authorized by the organizers.
  * Order: alphabetical by last name (per the proposal).
  */
 export const NEURIPS_SPEAKERS: Person[] = [
@@ -235,7 +235,7 @@ export const NEURIPS_SPEAKERS: Person[] = [
     name: "Abeba Birhane",
     affil: "Trinity College Dublin",
     affilLink: "https://www.tcd.ie",
-    webpage: "https://abebabirhane.com/",
+    webpage: "https://www.tcd.ie/scss/people/academic-staff/birhanea/",
     img: "/img/speakers/abebabirhane-tcd.jpg",
     topic: "Machine learning: from research and application to downstream societal impacts",
   },
@@ -259,7 +259,7 @@ export const NEURIPS_SPEAKERS: Person[] = [
     name: "Branka Marijan",
     affil: "Munk School of Global Affairs & Public Policy, University of Toronto",
     affilLink: "https://munkschool.utoronto.ca",
-    webpage: "https://ploughshares.ca/senior-researcher/branka-marijan/",
+    webpage: "https://munkschool.utoronto.ca/person/branka-marijan",
     img: "/img/speakers/brankamarijan.jpg",
     topic: "The struggle to regulate military AI and autonomous weapons",
   },
@@ -304,7 +304,7 @@ export const FIRST_EDITION_SPEAKERS: Person[] = [
     name: "Gisela Luján Andrade",
     affil: "Perú por el Desarme",
     affilLink: "https://peruporeldesarme.org.pe",
-    webpage: "https://www.linkedin.com/in/giselalujanandrade",
+    webpage: "https://www.forumarmstrade.org/giselalujanandrade.html",
     img: "/img/speakers/giselalujanandrade.jpg",
   },
   {

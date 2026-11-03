@@ -253,6 +253,11 @@ export const NEURIPS_SPEAKERS: Person[] = [
     img: "/img/speakers/juancarlosdemartin.jpg",
   },
   {
+    name: "Sophia Goodfriend",
+    webpage: "https://sophiagoodfriend.com/",
+    img: "/img/speakers/sophiagoodfriend.jpg",
+  },
+  {
     name: "Branka Marijan",
     affil: "Munk School of Global Affairs & Public Policy, University of Toronto",
     affilLink: "https://munkschool.utoronto.ca",
@@ -267,11 +272,14 @@ export const NEURIPS_SPEAKERS: Person[] = [
     img: "/img/speakers/josephredmon.jpg",
   },
   {
-    name: "David Gray Widder",
-    affil: "University of Texas at Austin",
-    affilLink: "https://www.utexas.edu",
-    webpage: "https://davidwidder.me/",
-    img: "/img/speakers/davidgraywidder.jpg",
+    name: "Vikram Subramanian",
+    webpage: "https://ethicalaialliance.org/people",
+    img: "/img/speakers/vikramsubramanian.jpg",
+  },
+  {
+    name: "Lucy Suchman",
+    webpage: "https://www.lancaster.ac.uk/humanities-arts-and-social-sciences/people/lucy-suchman",
+    img: "/img/speakers/lucysuchman.jpg",
   },
 ];
 

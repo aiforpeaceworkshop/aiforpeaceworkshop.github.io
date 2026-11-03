@@ -254,6 +254,8 @@ export const NEURIPS_SPEAKERS: Person[] = [
   },
   {
     name: "Sophia Goodfriend",
+    affil: "Pembroke College, University of Cambridge",
+    affilLink: "https://www.pem.cam.ac.uk",
     webpage: "https://sophiagoodfriend.com/",
     img: "/img/speakers/sophiagoodfriend.jpg",
   },
@@ -273,11 +275,15 @@ export const NEURIPS_SPEAKERS: Person[] = [
   },
   {
     name: "Vikram Subramanian",
+    affil: "Ethical AI Alliance",
+    affilLink: "https://ethicalaialliance.org",
     webpage: "https://ethicalaialliance.org/people",
     img: "/img/speakers/vikramsubramanian.jpg",
   },
   {
     name: "Lucy Suchman",
+    affil: "Lancaster University",
+    affilLink: "https://www.lancaster.ac.uk",
     webpage: "https://www.lancaster.ac.uk/humanities-arts-and-social-sciences/people/lucy-suchman",
     img: "/img/speakers/lucysuchman.jpg",
   },

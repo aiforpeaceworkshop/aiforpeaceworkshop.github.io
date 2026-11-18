@@ -118,10 +118,6 @@ export const ACCEPTED_TALKS: AcceptedTalk[] = [
     resource: { url: "https://indico.cern.ch/event/1721046/", label: "Talk page" },
   },
   {
-    title: "When General-Purpose Language Models Supply Dual-Use Expertise: A Forensic Signal for Peace-Oriented AI Governance.",
-    authors: "Manodyna KH, Samarth Ramesh",
-  },
-  {
     title: "Who Maps the Crisis? Community-Governed AI for Peacebuilding and Disaster Response.",
     authors: "Rebecca Firth (Humanitarian OpenStreetMap Team)",
   },
@@ -130,16 +126,8 @@ export const ACCEPTED_TALKS: AcceptedTalk[] = [
     authors: "Joseph Aylett-Bullock (University of Bristol)",
   },
   {
-    title: "Designing for De-escalation: Goal Framing for Strategic Decision-Making in High-Stakes Scenarios.",
-    authors: "Carlos Toxtli (Clemson University), Manuel Delaflor (Metacognition Institute)",
-  },
-  {
     title: "The Philosophical Grounds of a Duty, not just a Right, to Resist Injustice.",
     authors: "Annette Zimmermann (University of Wisconsin-Madison)",
-  },
-  {
-    title: "Non-State Armed Groups and the Limits of AI Safeguards and Evaluations.",
-    authors: "Panashe Zowa (Independent)",
   },
   {
     title: "From Human Rights Evidence to Responsible AI for Peace: Lessons from Conflict-Affected Yemen.",
@@ -153,10 +141,6 @@ export const ACCEPTED_TALKS: AcceptedTalk[] = [
     title: "MAESTRO4IHL: A Threat Model Framework for Synthetic Media Harms to POW Protections under IHL.",
     authors: "Nathan Heath (Syntony; The AIHL Project), Dr. Wm. Matthew Kennedy (King's College London), Valmik Nahata (University of California San Diego)",
     resource: { url: "https://www.aihlproject.org/", label: "Project website" },
-  },
-  {
-    title: "Mapping Military AI from Corporate Filings and Public Award Records.",
-    authors: "Hadi Asghari (TU Berlin)",
   },
 ];
 

@@ -258,9 +258,9 @@ export const NEURIPS_SPEAKERS: Person[] = [
   },
   {
     name: "Vikram Subramanian",
-    affil: "Ethical AI Alliance",
-    affilLink: "https://ethicalaialliance.org",
-    webpage: "https://ethicalaialliance.org/people",
+    affil: "ORCA",
+    affilLink: "https://notechforapartheid.eu/",
+    webpage: "https://notechforapartheid.eu/",
     img: "/img/speakers/vikramsubramanian.jpg",
   },
   {

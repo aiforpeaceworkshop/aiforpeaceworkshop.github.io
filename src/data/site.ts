@@ -139,8 +139,7 @@ export const ACCEPTED_TALKS: AcceptedTalk[] = [
   },
   {
     title: "MAESTRO4IHL: A Threat Model Framework for Synthetic Media Harms to POW Protections under IHL.",
-    authors: "Nathan Heath (Syntony; The AIHL Project), Dr. Wm. Matthew Kennedy (King's College London), Valmik Nahata (University of California San Diego)",
-    resource: { url: "https://www.aihlproject.org/", label: "Project website" },
+    authors: "Wm. Matthew Kennedy (King's College London, The AIHL Project), Nathan Heath (Syntony; The AIHL Project), Valmik Nahata (University of California San Diego)",
   },
 ];
 
